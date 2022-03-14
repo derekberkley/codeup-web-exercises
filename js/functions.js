@@ -55,10 +55,12 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
-function isTwo(random) {
-  var (random === 2) ? "This number is 2." : "This number is NOT 2.";
-
+function isTwo(num) {
+    var result = (num === 2);
+    return console.log(result);
 }
+    console.log(random);
+    isTwo(random);
 
 /**
  * TODO:
