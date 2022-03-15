@@ -114,6 +114,23 @@ tempCheck(isColdOutside);
     sumVar(num2);
 
 
-// functions with 1+ parameters/arguments
+// ----------
+// Console.logs are printed in order globally and then if used in functions, print when functions are called.
+    console.log("A - console.log print");   // 1
+    function printCity(location) {
+        console.log('B - console.log print');   //3
+        return location; //"San Antonio"
+        console.log('C - console.log print'); //5... DOES NOT PRINT since this is after the return statement.
+    }
 
-//
+    console.log('D - console.log print'); //2
+    printCity("San Antonio");
+    console.log('E - console.log print'); //4
+
+
+// functions with 1+ parameters/arguments
+function multipleTwoNums(a, b) {
+    return a + b;
+}
+
+console.log(multipleTwoNums(3, 82)); //use console.log to check work
