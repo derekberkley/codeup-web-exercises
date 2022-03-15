@@ -10,8 +10,11 @@
  */
 
 function sayHello(myNameIs) {
-    console.log("Hello, " + myNameIs);
+    var finalStr = "Hello, " + myNameIs;
+    console.log(finalStr);
+    return finalStr;
 }
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -20,8 +23,8 @@ function sayHello(myNameIs) {
  * console.log 'helloMessage' to check your work
  */
 
+console.log("TODO: call fn and pass name as a string literal argument.");
 var helloMessage = sayHello("Derek");
-console.log(helloMessage); //returns undefined.
 
 /**
  * TODO:
@@ -30,7 +33,8 @@ console.log(helloMessage); //returns undefined.
  * console.
  */
 
-var myNameIs = 'Derek B.';
+console.log("TODO: Store name as string in a var and pass to fn");
+var myNameIs = 'Derek B.'; //slightly altered name in variable assignment for differentiation in Console
 sayHello(myNameIs);
 
 // Don't modify the following line, it generates a random number between 1 and 3
@@ -56,10 +60,12 @@ var random = Math.floor((Math.random() * 3) + 1);
  */
 
 function isTwo(num) {
-    var result = (num === 2);
-    return console.log(result);
+    var result = (num === 2); //stores Boolean value in variable
+    return console.log(result); //returns Boolean value of function to Console
 }
-    console.log(random);
+
+    console.log("TODO: Create function that returns boolean based on if random # is 2");
+    console.log(random); //outside function per instructions
     isTwo(random);
 
 /**
@@ -74,6 +80,17 @@ function isTwo(num) {
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+function calculateTip(tip, bill) {
+    var total = tip * bill;
+    console.log("The tip amount is: $" + total.toFixed(2)); // used .toFixed for formatting in Console, I understand string vs number outputs!
+    return total; //separate console.log prints from the return if going to use final value in future fn calls
+}
+
+console.log("TODO: Create function that takes in a bill and tip % and calculates tip.");
+calculateTip(0.20, 20);
+calculateTip(0.25, 25.50);
+calculateTip(0.15, 33.42);
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
@@ -81,17 +98,42 @@ function isTwo(num) {
  * then display the dollar amount they should tip
  */
 
+ console.log("TODO: Use a prompt & alert to prompt user for the bill total and " +
+     "requested tip % and display tip $ amount."); //sets apart the answers on Console.
+
+ var mealBillString = prompt("Thank you for eating at The Family Restaurant. What is your bill total?");
+ var mealTipString = prompt("Would you like to tip a percentage of 15, 20, or 25?");
+ var mealTipNum = Number(mealTipString) / 100; //make sure string from user goes to Number for fn
+ var mealBillNum = Number(mealBillString);
+
+ var tipTotal = calculateTip(mealTipNum, mealBillNum);
+ alert("Based on the percentage you selected, the tip amount is: $" + tipTotal); //instructions say use prompt and alert
+
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
  * (before a discount is applied), and a discount percentage (a number between 0
  * and 1). It should return the result of applying the discount to the original
  * price.
- *
- * Example:
- * > var originalPrice = 100;
- * > var discountPercent = .2; // 20%
- * > applyDiscount(originalPrice, discountPercent) // 80
- *
- * > applyDiscount(45.99, 0.12) // 40.4712
- */
+ * */
+
+    // Pseudo-Code Road Map
+    // write the function using the assigned name
+    // create variables for price and discount percentage
+    // in the function, apply the discount
+    // return the price result after applying the discount
+
+console.log("TODO: Create a fn to calc result of applying discount to original price"); //sets apart the answers on Console.
+var originalPrice = 100;    //using example variables provided
+var discountPercent = .2; // 20%
+
+function applyDiscount(origP, amtOff) {
+    var newTotal = origP * (1 - amtOff); // 1 (or 100%) minus amtOff will calc new price after discount
+
+    //console.log NOT part of instruction but valuable to check my work
+    console.log("The original price of $" + origP + " after calculating the " + amtOff + " discount is: $" + newTotal.toFixed(2));
+
+    return newTotal; //this is the actual calc in num form, NOT in string as in Console.log above
+}
+applyDiscount(originalPrice, discountPercent) // 80
+applyDiscount(45.99, 0.12) // 40.4712
