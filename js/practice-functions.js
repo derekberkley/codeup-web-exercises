@@ -134,3 +134,4 @@ function multipleTwoNums(a, b) {
 }
 
 console.log(multipleTwoNums(3, 82)); //use console.log to check work
+

@@ -9,10 +9,8 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
-function sayHello(myNameIs) {
-    var finalStr = "Hello, " + myNameIs;
-    console.log(finalStr);
-    return finalStr;
+function sayHello(myName) {
+    return "Hello, " + myName; //can also store the string in a variable and return that variable
 }
 
 /**
@@ -23,8 +21,10 @@ function sayHello(myNameIs) {
  * console.log 'helloMessage' to check your work
  */
 
-console.log("TODO: call fn and pass name as a string literal argument.");
-var helloMessage = sayHello("Derek");
+console.log("TODO: call fn and pass name as a string literal argument."); //for reference in the Console
+
+var helloMessage = sayHello("Derek"); //storing fn result to a var per instructions
+console.log(helloMessage);
 
 /**
  * TODO:
@@ -34,8 +34,9 @@ var helloMessage = sayHello("Derek");
  */
 
 console.log("TODO: Store name as string in a var and pass to fn");
-var myNameIs = 'Derek B.'; //slightly altered name in variable assignment for differentiation in Console
-sayHello(myNameIs);
+
+var myName = 'Derek B.'; //slightly altered name in variable assignment for differentiation in Console
+console.log(sayHello(myName)); //chose alt way of console.log the fn result
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -61,12 +62,12 @@ var random = Math.floor((Math.random() * 3) + 1);
 
 function isTwo(num) {
     var result = (num === 2); //stores Boolean value in variable
-    return console.log(result); //returns Boolean value of function to Console
+    return result;  //return the variable so the Boolean can be manipulated elsewhere if necessary
 }
 
-    console.log("TODO: Create function that returns boolean based on if random # is 2");
-    console.log(random); //outside function per instructions
-    isTwo(random);
+console.log("TODO: Create function that returns boolean based on if random # is 2");
+console.log(random); //This lets me read the random number to check if the function is working
+console.log(isTwo(random));
 
 /**
  * TODO:
