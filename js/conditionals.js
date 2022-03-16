@@ -96,7 +96,7 @@ console.log("TODO: refactor function to use switch case statement for color anal
              console.log('The Pink Panther, 2005');
              break;
          default:
-             console.log('I still dont recognize that color.');
+             console.log('...Actually, look up your own band.');
      }
 }
 
@@ -117,7 +117,7 @@ colorSwitchCase('purple');
 
 var colorPrompt = prompt("Please type in a color here.");
 var colorOutput = analyzeColor(colorPrompt);
-alert("A movie with the color " + colorPrompt + " in the title is: " + colorOutput);
+alert("Based on the color you selected: " + colorPrompt + ". You should listen to the band: " + colorOutput);
 
 /* ########################################################################## */
 
@@ -141,6 +141,40 @@ alert("A movie with the color " + colorPrompt + " in the title is: " + colorOutp
  * return value.
  */
 
+console.log("TODO: write fn which accepts a lucky # and total amount and returns discounted price.")
+function calculateTotal(luckyNum, totalAmt) {
+    var result;
+    switch(luckyNum) {
+        case 0:
+            result = (totalAmt);
+            break;
+        case 1:
+            result = (.9 * totalAmt);
+            break;
+        case 2:
+            result = (.75 * totalAmt);
+            break;
+        case 3:
+            result = (.65 * totalAmt);
+            break;
+        case 4:
+            result = (.5 * totalAmt);
+            break;
+        case 5:
+            result = 0;
+            break;
+        default:
+            result = 'That is not a lucky number. Play again.';
+    }
+    return result;
+}
+
+console.log(calculateTotal(0, 100)) // returns 100, tests this lucky number
+console.log(calculateTotal(1, 100)) // returns 90, tests this lucky number
+console.log(calculateTotal(2, 100)) // returns 75, tests this lucky number
+console.log(calculateTotal(3, 100)) // returns 65, tests this lucky number
+console.log(calculateTotal(4, 100)) // returns 50, tests this lucky number
+console.log(calculateTotal(5, 100)) // returns 0, tests this unlucky number
 
 
 /**
@@ -151,8 +185,14 @@ alert("A movie with the color " + colorPrompt + " in the title is: " + colorOutp
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
+
+//Since this is an alert, it will run on Chrome BEFORE everything else here.
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+
+var userInputBill = prompt("How much is your bill?");
+var discPrice = calculateTotal(luckyNumber, Number(userInputBill));
+alert("Your bill is: $" + userInputBill + ". Your lucky number is: " + luckyNumber + ". Your discount price is: $" + discPrice);
 
 /**
  * TODO:
@@ -172,3 +212,60 @@ alert("A movie with the color " + colorPrompt + " in the title is: " + colorOutp
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+//var userNum; // define the variable
+//var whatchaSay = confirm("Would you like to pick a number?"); //store true value from user confirm input
+//
+//if (whatchaSay === true) {  //if input is 'yes' or true
+//    userNum = Number(prompt("Please enter a number.")); //execute a prompt for the string and store # in var
+//}
+//
+//// if/else statement to determine even or odd w/ user alert
+//if(userNum % 2 == 0) {
+//    alert("Your number is even.");
+//} else {
+//    alert("Your number is odd.");
+//}
+//
+//// alert statement that adds 100 to the user's inputted number
+//alert("Your number plus 100: " + (userNum + 100));
+//
+//// alert statement that tells the user if their number is positive or negative
+//if(userNum > 0) {
+//    alert("Your number is positive.");
+//} else {
+//    alert("Your number is negative.");
+//}
+
+//-----------
+var userNum, validUserNum; // declare variable in global scope
+var whatchaSay = confirm("Would you like to pick a number?");
+
+//if the user wants to enter a number then fn to gather a valid user input is executed
+if (whatchaSay === true) {
+    userNum = Number(prompt("Please enter a number."));
+    validUserNum = isNaN(userNum);
+}
+
+    // if user input is NaN. get new input. Otherwise, next function is invoked.
+if (validUserNum === true) {
+    userNum = Number(prompt("Please enter a number."));
+    } else {
+        lastProblem(userNum);
+    }
+
+// define the function to evaluate the user's number and be invoked when ready.
+function lastProblem(num1) {
+    // if/else statement to determine even or odd w/ user alert
+    var evenOrOdd = (num1 % 2 === 0) ? alert("Your number is even.") : alert("Your number is odd.");
+    // adds 100 to the user's inputted number
+    var plusOneHund = "Your number plus 100 is: " + (num1 + 100);
+    // alert statement that tells the user if their number is positive or negative
+    var posOrNeg = (num1 > 0) ? alert("Your number is positive.") : alert("Your number is negative.");
+
+    var finalPrint = evenOrOdd + alert(plusOneHund) + posOrNeg;
+
+    return finalPrint;
+}
+
+
