@@ -24,7 +24,7 @@
 console.log("TODO: fn analyzeColor with if/else if/else statements for colors");
 function analyzeColor(colorName) {
    if (colorName === 'red') { //if color is red, execute the next line of code
-       return "Red Hot Chili Peppers"; //return statement aassigned to each individual color
+       return "Red Hot Chili Peppers"; //return statement assigned to each individual color
    } else if (colorName === 'blue') {
        return "Blue Man Group";
    } else if (colorName === 'green') {
@@ -63,7 +63,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-console.log("TODO: invoking fn analyzeColor with provided variable randomColor.")
+console.log("TODO: invoke function: analyzeColor with provided variable randomColor.")
+console.log(randomColor);
 console.log(analyzeColor(randomColor));
 
 /**
@@ -71,7 +72,7 @@ console.log(analyzeColor(randomColor));
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 
-console.log("TODO: refactor function to use switch case statement for color analysis.")
+console.log("TODO: Function colorSwitchCase for another method for color analysis.")
  function colorSwitchCase(colorID) { //chose a different name for switch-case fn to compare results
      switch(colorID) {
          case 'red':
@@ -97,6 +98,7 @@ console.log("TODO: refactor function to use switch case statement for color anal
              break;
          default:
              console.log('...Actually, look up your own band.');
+             break;
      }
 }
 
@@ -238,20 +240,21 @@ alert("Your bill is: $" + userInputBill + ". Your lucky number is: " + luckyNumb
 //}
 
 //-----------
-var userNum, validUserNum; // declare variable in global scope
-var whatchaSay = confirm("Would you like to pick a number?");
 
-//if the user wants to enter a number then fn to gather a valid user input is executed
+var whatchaSay = confirm("Would you like to pick a number?");
+var userNum, validUserNum; // declare variables in global scope
+
+//if the user wants to enter a number then this gathers a user input
 if (whatchaSay === true) {
     userNum = Number(prompt("Please enter a number."));
-    validUserNum = isNaN(userNum);
-}
+    validUserNum = isNaN(userNum); //converts user input to boolean if incorrect
+    }
 
-    // if user input is NaN. get new input. Otherwise, next function is invoked.
+// if user input is NaN. this prompts for a new input.
 if (validUserNum === true) {
     userNum = Number(prompt("Please enter a number."));
     } else {
-        lastProblem(userNum);
+        lastProblem(userNum); //If user input is correct the function is invoked.
     }
 
 // define the function to evaluate the user's number and be invoked when ready.
@@ -259,13 +262,67 @@ function lastProblem(num1) {
     // if/else statement to determine even or odd w/ user alert
     var evenOrOdd = (num1 % 2 === 0) ? alert("Your number is even.") : alert("Your number is odd.");
     // adds 100 to the user's inputted number
-    var plusOneHund = "Your number plus 100 is: " + (num1 + 100);
+    var plusOneHund = alert("Your number plus 100 is: " + (num1 + 100));
     // alert statement that tells the user if their number is positive or negative
     var posOrNeg = (num1 > 0) ? alert("Your number is positive.") : alert("Your number is negative.");
 
-    var finalPrint = evenOrOdd + alert(plusOneHund) + posOrNeg;
+    var finalPrint = evenOrOdd + plusOneHund + posOrNeg;
 
     return finalPrint;
-}
+    }
 
 
+//more practice functions
+// "use strict";
+//
+// /**
+//  * Write your solutions here.
+//  *
+//  * **Note**: While normally it is good practice to wrap your javascript in an
+//  * immediately invoked function expression (iife), you should _not_ do that
+//  * here. If you do, the automated tests will not be able to see your functions.
+//  */
+//
+// function isBoolean(value) {
+//     return (typeof value == "boolean");
+// }
+//
+// function isString(input) {
+//     return (typeof input == "string");
+// }
+//
+// function isNotString (given) {
+//     return (typeof given !== "string");
+// }
+//
+// function isEmptyString(param) {
+//     return (param === "");
+// }
+//
+// function isNotANumber(notNum) {
+//     return (typeof notNum !== "number");
+// }
+//
+// function isNegative(pessimistic) {
+//     return (pessimistic < 0);
+// }
+//
+// function isPositive(optimistic) {
+//     return (optimistic > 0);
+// }
+//
+// function isZero(hero) {
+//     return (Number(hero) === 0);
+// }
+//
+// function isArray(arg) {
+//     return (Array.isArray(arg));
+// }
+//
+// function upperCase(final) {
+//     if (typeof final !== "string") {
+//         return false;
+//     } else {
+//         return final.toUpperCase();
+//     }
+// }
