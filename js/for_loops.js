@@ -45,13 +45,9 @@ for (var i = 1; i <= 10; i++) {
 // 88888888
 // 999999999
 
-// 1. Create a for loop framework
-// 2. begin at 1, end at 9, increment up
-// 3. console.log the increment # the number of times
-
 for (var i = 1; i < 10; i++) {
     var numI = String(i);
-    var print = numI += numI;
+    var print = numI.repeat(i);
     console.log(print);
 }
 
