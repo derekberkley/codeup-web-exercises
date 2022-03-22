@@ -26,10 +26,10 @@ for (var i = 1; i <= 10; i++) {
     //generate differently ever iteration.
     var randomizer = Math.floor((Math.random() * 200) + 20);
 
-    if (randomizer % 2 == 0) {
-        console.log("#" + i + ": " + randomizer + " is even.")
+    if (randomizer % 2 === 0) {
+        console.log("#" + i + ": " + randomizer + " is even.");
     } else {
-        console.log("#" + i + ": " + randomizer + " is odd.")
+        console.log("#" + i + ": " + randomizer + " is odd.");
     }
 }
 
@@ -50,6 +50,14 @@ for (var i = 1; i < 10; i++) {
     var print = numI.repeat(i);
     console.log(print);
 }
+// Use a for loop inside of a for loop for a different answer to the same question.
+// var output = '';
+// for (var i = 1; i < 10; i++) {
+//     output += i;
+//     for(var j = 1; j <= i; j++) {
+//         console.log(output);
+//     }
+// }
 
 //TODO: Create a for loop that uses console.log to create the
 // output shown below.

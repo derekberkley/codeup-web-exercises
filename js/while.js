@@ -32,23 +32,26 @@ while (i < 17) {
 // simulating the amount of cones being bought by her clients. Use a do-while
 // loop to log to the console the amount of cones sold to each person.
 
-
-var allCones = Math.floor(Math.random() * 50) + 50; //randomizer dictates how many cones need to be sold.
-console.log("Total: " + allCones); //printing total cones for reference
+//randomizer dictates how many cones need to be sold.
+var allCones = Math.floor(Math.random() * 50) + 50;
+//printing total cones for sale from randomizer about for reference
+console.log("Total: " + allCones);
 
 
 do {
-    var bought = Math.floor(Math.random() * 5) + 1; //randomizer dictates how many cones are bought on each occasion
+    //randomizer #2 dictates how many cones are bought on each occasion (scope!)
+    var bought = Math.floor(Math.random() * 5) + 1;
 
+    // takes current values of total and purchase occasion and if greater than zero, execute
     if ((allCones - bought) >= 0) {
-        console.log(allCones + " cones sold.");
-        allCones = allCones - bought;
-    } else {
-        console.log("Can't sell you " + bought + ". I only have " + allCones);
-        continue;
+        console.log(bought + " cones sold."); //print each transaction
+        allCones -= bought; // reassign variable with new total after transaction
+    } else { //execute if the purchase request is larger than inventory
+        console.log("Can't sell you " + bought + ". I only have " + allCones); //tell the customer!
+        continue; // no variable to reassign since no transaction occurred.
     }
-} while (allCones > 0 || allCones < 0);
-
+} while (allCones > 0 || allCones < 0); //if total is above or below 0 then business needs to be conducted (do!)
+// when allCones = 0, break from loop and report to console.
 (allCones === 0) ? "Yay! I sold them all!" : "Woops, we have more...";
 
 
