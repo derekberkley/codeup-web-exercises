@@ -25,6 +25,12 @@ while (userNum % 2 === 0) {
 //TODO: Use a loop and the continue statement to output all the odd numbers
 // between 1 and 50, except for the number the user entered.
 
+
+// var userNum = Number((prompt("Pick an odd number between 1 and 50.")));
+// while (userNum % 2 === 0) { //or between 1 and 50
+//     userNum = Number((prompt("Pick an odd number between 1 and 50.")));
+// }
+
 for (var i = 1; i <= 50; i++) {
     if ((i !== userNum) && (i % 2 !== 0)) {
         console.log("Odd Numbers 1-50: " + i);
@@ -35,3 +41,14 @@ for (var i = 1; i <= 50; i++) {
         continue;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
