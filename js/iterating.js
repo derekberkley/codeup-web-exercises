@@ -15,7 +15,7 @@
      * array.
      */
 
-    console.log(berkleyNames.length);
+    console.log("Length of first array is ", berkleyNames.length);
 
     /**
      * TODO:
@@ -49,6 +49,7 @@
     berkleyNames.forEach(function(name) {
         console.log("A forEach function used to print this element: " + name);
     })
+
 
     /**
      * TODO:
