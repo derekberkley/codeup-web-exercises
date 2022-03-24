@@ -84,6 +84,7 @@ function shuffle(array) {
 }
 shuffle(colorArray);
 
+var shuffledArray = array.sort((a, b) => 0.5 - Math.random());
 
 //-------------------
 // Randomized Color Array w/out Comments
@@ -100,7 +101,8 @@ shuffle(colorArray);
 //     }
 //     console.log("Randomized ", array);
 // }
-// shuffle(deck);
+// shuffle(colorArray);
+
 
 
 
@@ -109,33 +111,33 @@ shuffle(colorArray);
 //-------------------
 // Randomized Deck Assignment
 //-------------------
-// var deck = [
-//     "Aspades", "Adiamonds", "Ahearts", "Aclubs",
-//     "1spades", "1diamonds", "1hearts", "1clubs",
-//     "2spades", "2diamonds", "2hearts", "2clubs",
-//     "3spades", "3diamonds", "3hearts", "3clubs",
-//     "4spades", "4diamonds", "4hearts", "4clubs",
-//     "5spades", "5diamonds", "5hearts", "5clubs",
-//     "6spades", "6diamonds", "6hearts", "6clubs",
-//     "7spades", "7diamonds", "7hearts", "7clubs",
-//     "8spades", "8diamonds", "8hearts", "8clubs",
-//     "9spades", "9diamonds", "9hearts", "9clubs",
-//     "10spades", "10diamonds", "10hearts", "10clubs",
-//     "Jspades", "Jdiamonds", "Jhearts", "Jclubs",
-//     "Qspades", "Qdiamonds", "Qhearts", "Qclubs",
-//     "Kspades", "Kdiamonds", "Khearts", "Kclubs"];
-// console.log("Original Deck: ", deck);
-//
-// function shuffle(array) {
-//     for (var i = array.length-1; i >= 0; i--) {
-//         var random = Math.floor(Math.random() * (i));
-//         var placeHolder = array[i];
-//         array[i] = array[random];
-//         array[random] = placeHolder;
-//     }
-//     console.log("Randomized ", array);
-// }
-// shuffle(deck);
+var deck = [
+    "Aspades", "Adiamonds", "Ahearts", "Aclubs",
+    "1spades", "1diamonds", "1hearts", "1clubs",
+    "2spades", "2diamonds", "2hearts", "2clubs",
+    "3spades", "3diamonds", "3hearts", "3clubs",
+    "4spades", "4diamonds", "4hearts", "4clubs",
+    "5spades", "5diamonds", "5hearts", "5clubs",
+    "6spades", "6diamonds", "6hearts", "6clubs",
+    "7spades", "7diamonds", "7hearts", "7clubs",
+    "8spades", "8diamonds", "8hearts", "8clubs",
+    "9spades", "9diamonds", "9hearts", "9clubs",
+    "10spades", "10diamonds", "10hearts", "10clubs",
+    "Jspades", "Jdiamonds", "Jhearts", "Jclubs",
+    "Qspades", "Qdiamonds", "Qhearts", "Qclubs",
+    "Kspades", "Kdiamonds", "Khearts", "Kclubs"];
+console.log("Original Deck: ", deck);
+
+function shuffle(array) {
+    for (var i = array.length-1; i >= 0; i--) {
+        var random = Math.floor(Math.random() * (i));
+        var placeHolder = array[i];
+        array[i] = array[random];
+        array[random] = placeHolder;
+    }
+    console.log("Randomized ", array);
+}
+shuffle(deck);
 
 
 
