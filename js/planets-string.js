@@ -26,9 +26,9 @@
      */
 
     var newPlanStr = planetsArray.join("<br>");
-        console.log(newPlanStr);
+    console.log(newPlanStr);
 
-        var bonus = planetsArray.join("</li><li>");
-        console.log("<ul><li>" + bonus + "</li></ul>");
+    var bonus = planetsArray.join("</li><li>");
+    console.log("<ul><li>" + planetsArray.join("</li><li>") + "</li></ul>");
 
 })();
