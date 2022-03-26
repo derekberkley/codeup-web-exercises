@@ -62,14 +62,31 @@ var arry = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var oddOnes = [];
 
 function oddArr(input) {
-    input.forEach(function(num)) {
-        if (num % 2 === 1) ? addOnes.push(num) : ;
-    }
-
+    input.forEach(function(num) {
+        (num % 2 === 1) ? oddOnes.push(num) : false;
+    });
+        arry = oddOnes;
+        console.log(arry, "Just the odds");
+        return arry;
 }
+oddArr(arry);
+
 //
 // 5. Define a function named `creditCard` that takes a credit card number and only displays the last four characters. The rest of the card number must be replaced by ************.
 //
+var cardArr, lastFour, lastFourStr;
+function creditCard(card) {
+    if (typeof card === 'number' && card.length === 16) {
+        var cardArr = card.split("");
+        var lastFour = cardArr.slice(13, 16);
+        var lastFourStr = lastFour.join("");
+        console.log("************", lastFourStr);
+        return "************", lastFourStr;
+    } else {
+        return "That's not a CC Number.";
+    }
+}
+creditCard(1234567890123456);
 //
 // 6. create a function named `AlphabetSoup` that takes a string and returns a string with its letters in alphabetical order. Return false if string is empty or null
 //
