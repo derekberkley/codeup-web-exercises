@@ -74,11 +74,12 @@ oddArr(arry);
 //
 // 5. Define a function named `creditCard` that takes a credit card number and only displays the last four characters. The rest of the card number must be replaced by ************.
 //
-var cardArr, lastFour, lastFourStr;
+
 function creditCard(card) {
-    if (typeof card === 'number' && card.length === 16) {
-        var cardArr = card.split("");
-        var lastFour = cardArr.slice(13, 16);
+    var cardStr = String(card);
+    if (typeof card === 'number' && cardStr.length === 16) {
+        var cardArr = cardStr.split("");
+        var lastFour = cardArr.slice(12, 16);
         var lastFourStr = lastFour.join("");
         console.log("************", lastFourStr);
         return "************", lastFourStr;
@@ -90,6 +91,24 @@ creditCard(1234567890123456);
 //
 // 6. create a function named `AlphabetSoup` that takes a string and returns a string with its letters in alphabetical order. Return false if string is empty or null
 //
+
+function AlphabetSoup(string) {
+    var strToArr = string.split("");
+    var inOrderArr = strToArr.sort();
+    var inOrderStr = inOrderArr.join("");
+    console.log(inOrderArr);
+    return inOrderArr;
+}
+AlphabetSoup("thequickbrownfoxjumpedoverthelazydog");
 //
 // 7. create a function named `reverse` that takes in and reverses an array.
-// # regulus-second-js-reassessment-review
+
+function goBackward([array]) {
+    var backwards = array.reverse;
+    console.log(backwards);
+    return backwards;
+}
+
+goBackward(["baby", "wife", "dog", "house"]);
+goBackward([ 2, 4, 6, 8]);
+goBackward([1, 2, 3, 4, 5, 6]);
