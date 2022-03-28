@@ -155,17 +155,18 @@ shuffle(deck);
 // reverse the array
 // re-join the array without any punctuation for the string in reverse.
 function moonwalk(string) {
-    return string.split("").reverse().join("");
+    var final = string.split("").reverse().join("");
+    return final;
 }
 
 moonwalk('hello');
 
 //Option 2 (syntax) arrow function accomplishes the same outcome
-let reverseString = (str) => {
-    return str.split("").reverse().join("");
-}
-
-reverseString('world');
+// let reverseString = (str) => {
+//     return str.split("").reverse().join("");
+// }
+//
+// reverseString('world');
 
 
 //-------------------

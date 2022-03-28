@@ -12,6 +12,13 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
+        var person = {
+            firstName: 'Derek',
+            lastName: 'Berkley',
+        };
+        console.log(person.firstName);
+        console.log(person.lastName);
+
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -21,6 +28,15 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+
+    function greeting() {
+        var final = "Hello, " + person.firstName + " " + person.lastName + "!";
+        console.log(final);
+        return final;
+    }
+
+    person.sayHello = greeting();
+    console.log(person);
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -36,11 +52,30 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    shoppers.forEach(function(shopper) {
+        console.log(shoppers.name);
+        return shoppers.name;
+    });
+
+    // shoppers.forEach(function(shopper) {
+    //     console.log(shoppers.name);
+    //     console.log("Spent $" + shoppers.amount);
+    //     if (shoppers.amount > 200) {
+    //         var discountReport = ("Received a discount of 12% worth: $" + (shoppers.amount * .12));
+    //         var final = ("Paid $" + (shoppers.amount * .88));
+    //         console.log(discountRepor);
+    //         console.log(final);
+    //     } else {
+    //         var noDiscount = "Did not receive the 12% discount."
+    //         return noDiscount;
+    //     }
+    // });
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -54,6 +89,12 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = {
+
+    }
+
+
 
     /**
      * TODO:
