@@ -103,10 +103,10 @@ AlphabetSoup("thequickbrownfoxjumpedoverthelazydog");
 //
 // 7. create a function named `reverse` that takes in and reverses an array.
 
-function goBackward([array]) {
-    var backwards = array.reverse;
-    console.log(backwards);
-    return backwards;
+function goBackward(array) {
+    var yarra = array.reverse();
+    console.log(yarra);
+    return yarra;
 }
 
 goBackward(["baby", "wife", "dog", "house"]);
