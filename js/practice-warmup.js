@@ -142,8 +142,55 @@ shuffle(deck);
 
 
 
+//-------------------
+// 1. Return a string in reverse
+// ex. reverseString(‘hello’) === ‘olleh’
+// let reverseString = (str) => {
+//   return //Something
+// };
+//-------------------
+
+//Option 1 (syntax) define the function
+// split the string into an array with each element as a letter from the string
+// reverse the array
+// re-join the array without any punctuation for the string in reverse.
+function moonwalk(string) {
+    return string.split("").reverse().join("");
+}
+
+moonwalk('hello');
+
+//Option 2 (syntax) arrow function accomplishes the same outcome
+let reverseString = (str) => {
+    return str.split("").reverse().join("");
+}
+
+reverseString('world');
 
 
+//-------------------
+// 2. Return true if palindrome and false if not
+// ex. isPalindrome(‘racecar’) === ‘true’, isPalindrome(‘hello’) == false
+// let isPalindrome = (str) => {
+// };
+//-------------------
+
+// use a for loop to check every letter of the string
+// compare each letter against its opposite in the string
+// if false, return false. if true, continue.
+function isPalindrome(word) {
+    var palMiddle = word.length;
+    for (var i = 0; i < palMiddle/2; i++) {
+        if (word[i] !== word[palMiddle - 1 - i]) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+}
+
+isPalindrome('racecar');
+isPalindrome('hello');
 
 
 
