@@ -58,24 +58,23 @@
         {name: 'George', amount: 320}
     ];
 
-    shoppers.forEach(function(shopper) {
-        console.log(shoppers.name);
-        return shoppers.name;
-    });
 
-    // shoppers.forEach(function(shopper) {
-    //     console.log(shoppers.name);
-    //     console.log("Spent $" + shoppers.amount);
-    //     if (shoppers.amount > 200) {
-    //         var discountReport = ("Received a discount of 12% worth: $" + (shoppers.amount * .12));
-    //         var final = ("Paid $" + (shoppers.amount * .88));
-    //         console.log(discountRepor);
-    //         console.log(final);
-    //     } else {
-    //         var noDiscount = "Did not receive the 12% discount."
-    //         return noDiscount;
-    //     }
-    // });
+    for (var i = 0; i < shoppers.length; i++) {
+        console.log("Name: " + shoppers[i].name);
+        console.log("Spent $" + shoppers[i].amount);
+        if (shoppers[i].amount > 200) {
+            var discountReport = ("Received a discount of 12% worth: $" + (shoppers[i].amount * .12));
+            var final = ("Paid $" + (shoppers[i].amount * .88));
+            console.log(discountReport);
+            console.log(final);
+            continue;
+        } else {
+            var noDiscount = "Did not receive the 12% discount."
+            console.log(noDiscount);
+            continue;
+        }
+    };
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
