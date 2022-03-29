@@ -64,7 +64,7 @@ var states = {
         }]
     },
     illinois: {
-        capital: "springrfield",
+        capital: "springfield",
         weather: "always chills",
     },
     kansas: {
