@@ -193,6 +193,61 @@ function isPalindrome(word) {
 isPalindrome('racecar');
 isPalindrome('hello');
 
+//-------------------
+// Write a function that filters out numbers from a list.
+//-------------------
+
+var comboArr = [ 1, "A", 2, "b", 3, "C", 4, "d"];
+var noNumArr = [];
+
+function filter(array) {
+
+    console.log("Original Array: ", array);
+
+    array.forEach(function(item) {
+        if (typeof item !== 'number'){
+            noNumArr.push(item);
+        } else {
+            return false;
+        }
+    });
+    console.log("Filtered Array: ", noNumArr);
+    return noNumArr;
+}
+
+filter(comboArr);
+
+// comboArr.forEach(function(item) {
+//     if (typeof item !== 'number'){
+//         noNumArr.push(item);
+//     } else {
+//         return false;
+//     }
+//     console.log(noNumArr);
+//     return noNumArr;
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

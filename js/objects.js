@@ -37,7 +37,7 @@
     // person.greeting = sayHello();
 
     person.sayHello = function() {
-        var final = "Hello, " + person.firstName + " " + person.lastName + "!";
+        var final = "Hello, " + this.firstName + " " + this.lastName + "!";
         return final;
     };
 
@@ -81,7 +81,6 @@
     //     }
     // };
 
-    //array.forEach(function(element, index (not necessary), array) {}
     shoppers.forEach(function(input) {
 
         console.log("Name: " + input.name);
