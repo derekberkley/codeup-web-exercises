@@ -91,3 +91,4 @@ function printCities(statesObj) {
 }
 
 printCities(states);
+
