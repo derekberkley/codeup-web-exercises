@@ -7,12 +7,19 @@
             .header {
                 padding: 10px;
                 background: #000000;
-                color: #f2f2f2
+                color: #f2f2f2;
+                font-size: 2em;
+
             }
 
-            a:link {
-                color: #8080800;
+
+            .header a:link {
+                color: #C6C6C6;
             }
+            .header a:hover {
+                color: #808080
+            }
+
 
             .codeup {
                 font: 2em;
@@ -21,22 +28,53 @@
             }
             h1 {
                 font-size: 6em;
+                padding: 10px;
+                margin-bottom: 0px;
+                margin-top: 10px;
+
             }
+            body{
+                background: #f2f2f2;
+            }
+            th {
+                font-size: 2em;
+            }
+            #avatar img {
+                float: left;
+            }
+
+            td {
+                vertical-align: middle;
+                text-align: center;
+                padding: 30px;
+            }
+            caption {
+                text-align: center;
+                font-size: 3em;
+            }
+            thead {
+                font-size: .5em;
+            }
+
+
 
         </style>
 </head>
-    <body>
         <div class="header">
             <p>
                 <img src="/Users/derekberkley/IdeaProjects/codeup-web-exercises/html/images/github_logo.png" alt="GitHub Logo" width="100px height=100px">
-                <a href="https://github.com/pulls" target="_blank">Pull requests</a>
-                <a href="https://github.com/issues" target="_blank">Issues</a>
-                <a href="https://github.com/marketplace" target="_blank">Marketplace</a>
-                <a href="https://github.com/explore" target="_blank">Explore</a>
+                    <span id="headlinks">
+                    <a href="https://github.com/pulls" target="_blank">Pull requests</a>
+                    <a href="https://github.com/issues" target="_blank">Issues</a>
+                    <a href="https://github.com/marketplace" target="_blank">Marketplace</a>
+                    <a href="https://github.com/explore" target="_blank">Explore</a>
+                    </span>
             </p>
 
-        </div class='codeup'>
-        <h1>
+        </div>
+    <body>
+
+        <h1 id="codeup">
             <img src="/Users/derekberkley/IdeaProjects/codeup-web-exercises/html/images/codeup-arrow.png" alt="Codeup Logo" width="100px height=100px">
         Codeup</h1>
 
@@ -51,21 +89,33 @@
 
         <div>
             <table>
+                <caption><strong>
+                    Codeup's dev team
+                </strong></caption>
+
+                <thead>
+                    <tr>
+                        <th>Avatar</th>
+                        <th>Name</th>
+                        <th>Membership</th>
+                        <th>Participation</th>
+                    </tr>
+                </thead>
                 <tr>
-                    <th>Codeup's dev team</th>
-                </tr>
-                <tr>
-                    <td>
+                    <td id="avatar">
                         <img src="https://fer-uig.glitch.me" alt="user-icon" />
-                        Kent Beck
-                        <p>KentBeck</p>
+                    </td>
+                    <td>
+                        Kent Beck<br></br>KentBeck
                     </td>
                     <td>Member</td>
                     <td>1 teams</td>
                 </tr>
                 <tr>
-                    <td>
+                    <td id="avatar">
                         <img src="https://fer-uig.glitch.me" alt="user-icon2" />
+                    </td>
+                    <td>
                         Codeup Instruction Staff
                         <p>CodeupInstructors</p>
                     </td>
@@ -73,8 +123,10 @@
                     <td>1 teams</td>
                 </tr>
                 <tr>
-                    <td>
+                    <td id="avatar">
                         <img src="https://fer-uig.glitch.me" alt="user-icon3" />
+                    </td>
+                    <td>
                         Martin Fowler
                         <p>KentBeck</p>
                     </td>
@@ -85,7 +137,7 @@
 
 
 
-        </div>`
+        </div>
         <div>
             <p>&copy;2018 GitHub, Inc.
                 <a href="https://docs.github.com/en/github/site-policy/github-terms-of-service">Terms</a>
