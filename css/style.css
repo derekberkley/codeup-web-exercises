@@ -13,4 +13,24 @@ a:active {
 }
 .fancy-header {
     color: #AA00FF;
+    text-align: center;
+}
+h2 {
+    color: #808080;
+    text-decoration: underline;
+}
+body {
+    background-color: papayawhip;
+    background-image: url("/Users/derekberkley/IdeaProjects/codeup-web-exercises/html/images/interlaced.png");
+    font-family: "Ubuntu", Sans-Serif;
+}
+ul {
+    list-style: square;
+}
+table {
+    padding: 20px;
+    font-size: 2em;
+}
+td {
+    padding: 20px;
 }
