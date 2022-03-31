@@ -1,0 +1,16 @@
+
+a:link {
+    color: #0000FF;
+}
+a:visited {
+    color: #AA00FF;
+}
+a:hover {
+    color:  #00FF00;
+}
+a:active {
+    color:  #FF0000;
+}
+.fancy-header {
+    color: #AA00FF;
+}
