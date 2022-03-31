@@ -2,9 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Register With Us</title>
 </head>
 <body>
+
+        <form method="POST" action="https://request-inspector.glitch.me/">
+            <p>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Enter your email address">
+            </p>
+            <p>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password">
+            </p>
+            <p>
+            <textarea name="comment" placeholder="Share a description of yourself here"></textarea>
+            </p>
+
+            <!-- Changing from Radio Button to Checkboxes...
+            <p>
+                <label for="findus">How did you head about us?</label><br>
+                <input type="radio" id="findus" name="quiz_question_1" value="billboard">Billboard<br>
+                <input type="radio" id="findus" name="quiz_question_1" value="radio">Radio<br>
+                <input type="radio" id="findus" name="quiz_question_1" value="internet">Internet<br>
+                <input type="radio" id="findus" name="quiz_question_1" value="deity">A Deity Spoke to Me<br>
+                <input type="radio" id="findus" name="quiz_question_1" value="other">Other<br>
+
+            </p>
+            -->
+
+            <p>
+                <label for="findus">How did you head about us?</label><br>
+                <input type="radio" id="findus" name="findus_billboard" value="billboard">Billboard<br>
+                <input type="radio" id="findus" name="findus_radio" value="radio">Radio<br>
+                <input type="radio" id="findus" name="findus_internet" value="internet">Internet<br>
+                <input type="radio" id="findus" name="findus_deity" value="deity">A Deity Spoke to Me<br>
+                <input type="radio" id="findus" name="findus_other" value="other">Other<br>
+            </p>
+
+            <p>
+                <label for="browser">What web browser are you using?</label><br>
+                <select name="browser" id="browser">
+                    <option value="chrome">Chrome</option>
+                    <option value="edge">Edge</option>
+                    <option value="brave">Brave</option>
+                    <option value="firefox">Firefox</option>
+                </select>
+            </p>
+
+            <button type="submit">Submit</button>
+
+        </form>
 
 </body>
 </html>
