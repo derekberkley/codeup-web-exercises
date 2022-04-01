@@ -1,0 +1,27 @@
+#fancy-header {
+    text-align: center;
+    color: red;
+    outline: 2px solid black;
+    width: 100%;
+}
+#chiliTable ul {
+    margin: 20px;
+    border-width: 1px;
+    border-color: black;
+}
+
+ul {
+    width: 500px;
+}
+
+ul li img {
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin: 0 15px 0 0;
+}
+
+li {
+    padding: 10px;
+    overflow: auto;
+}
