@@ -1,3 +1,9 @@
+:root {
+    --bg-info: #8d91e0;
+    --text-info: #2129db;
+    --bg-success: #8fe39d;
+    --text-success: #1c6328;
+}
 body, html {
     height: 100%;
     width: 100%;
@@ -7,27 +13,27 @@ body, html {
 }
 .message-info {
     width: 90%;
-    margin: 2px;
+    margin: 3px;
     padding: 3px;
     border: 1px solid #808080;
     border-radius: 3px;
-    background-color: #8d91e0;
-    color: #2129db;
+    background-color: var(--bg-info);
+    color: var(--text-info);
 }
 
 .message-success {
     width: 90%;
-    margin: 2px;
+    margin: 3px;
     padding: 3px;
     border: 1px solid #808080;
     border-radius: 3px;
-    background-color: #8fe39d;
-    color: #1c6328;
+    background-color: var(--bg-success);
+    color: var(--text-success);
 }
 
 .message-warning {
     width: 90%;
-    margin: 2px;
+    margin: 3px;
     padding: 3px;
     border: 1px solid #808080;
     border-radius: 3px;
@@ -37,7 +43,7 @@ body, html {
 
 .message-error {
     width: 90%;
-    margin: 2px;
+    margin: 3px;
     padding: 3px;
     border: 1px solid #808080;
     border-radius: 3px;
