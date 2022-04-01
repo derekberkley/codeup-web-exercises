@@ -5,3 +5,42 @@ body, html {
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
+.message-info {
+    width: 90%;
+    margin: 2px;
+    padding: 3px;
+    border: 1px solid #808080;
+    border-radius: 3px;
+    background-color: #8d91e0;
+    color: #2129db;
+}
+
+.message-success {
+    width: 90%;
+    margin: 2px;
+    padding: 3px;
+    border: 1px solid #808080;
+    border-radius: 3px;
+    background-color: #8fe39d;
+    color: #1c6328;
+}
+
+.message-warning {
+    width: 90%;
+    margin: 2px;
+    padding: 3px;
+    border: 1px solid #808080;
+    border-radius: 3px;
+    background-color: #ede89a;
+    color: #948c0f;
+}
+
+.message-error {
+    width: 90%;
+    margin: 2px;
+    padding: 3px;
+    border: 1px solid #808080;
+    border-radius: 3px;
+    background-color: #e68787;
+    color: #800505;
+}
