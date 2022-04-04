@@ -257,9 +257,17 @@ library.forEach(function(book) {
     }
 });
 
+//TODO: Write a JS code to return an array of only the Even numbers from the given array.
 
+var origArray = [12,2,3,4,5,6,7,8,9]
 
+// var onlyEvenArr = origArray.filter(x => x % 2 === 0);
+// console.log(onlyEvenArr);
 
+//filter method immediately invokes an anonymous arrow function and
+// returns an array with the elements that meet stated criteria
+
+console.log(origArray.filter(x => x % 2 === 0))
 
 
 
