@@ -83,10 +83,15 @@ a {
 }
 .profile-form {
     float: right;
+    /*vertical-align: middle;*/
 }
 .btn-large {
-    /*Could not figure out how to make this work with line-height*/
-    /*calculated height of element and parent and did the math for margin to vertically align*/
+    /*
+    Could not figure out how to make this work
+    with line-height. I calculated height of element and
+    parent and did the math for margin to vertically align
+    */
+    /*vertical-align: middle;*/
     margin-top: 17px;
 }
 .profile-details {
