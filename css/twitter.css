@@ -110,8 +110,19 @@ a {
 .media {
     width: 100%;
     background-color: var(--light-bg);
-    border-bottom-width: 1px;
-    border-color: var(--separator-color);
     padding: .5em;
     overflow: auto;
+    border-bottom: 1px solid var(--separator-color);
+}
+.media-image {
+    max-width: 50px;
+    float: left;
+    margin-top: 1.33em;
+}
+.media-body {
+    float: left;
+    width: calc(100% - 50px);
+}
+.profile-entry {
+    margin: .5em;
 }
