@@ -1,5 +1,4 @@
-// //TODO: Write a javascript function that accepts the 3 lengths of
-// // a triangle and outputs the triangle’s area.
+// //TODO: Write a javascript function that accepts the 3 lengths of a triangle and outputs the triangle’s area.
 //
 // function pythagorean(side1, side2, side3) {
 //
@@ -19,8 +18,8 @@
 // pythagorean(3, 4, 5);
 
 //TODO: Fizzbuzz Activity
-// Print numbers 1-100
-//if # is divisible by 3 use Fizz
+// Print numbers 1-100.
+// f # is divisible by 3 use Fizz
 // if # is divisible by 5 use Buzz
 // if # is divisible by both 3 and 5 use FizzBuzz
 
@@ -270,8 +269,40 @@ var origArray = [12,2,3,4,5,6,7,8,9]
 console.log(origArray.filter(x => x % 2 === 0))
 
 
+//TODO: Add up all numbers in the array.
+// example input: [1,2,3,4,5]; expected output: 15
+// some possible test cases to think about:
+// function should be called ‘sumArr’
+// function should return a number
+// function should accept an array
+// function should return “sum not available” if array is empty
+// function should handle non-numbers
 
+var example = [1, 2, 3, 4, 5];
+var emptyArray = [];
+var strArray = ["one", "two", "three", "four", "five"];
+var numStrArr = ["1", "2", "3", "4", "5"];
+var notArray = "nine";
 
-
-
-
+function sumArr(arry) {
+    var sum = 0;
+    if (Array.isArray(arry) === false) {
+        return "this is not an array";
+    } else if (arry.length === 0) {
+        return "sum not available";
+    } else {
+            arry.forEach(function(element) {
+                if (typeof element !== 'number') {
+                    sum += Number(element);
+                } else {
+                    sum += element;
+                }
+            })
+        return sum;
+    }
+}
+// sumArr(example); //testing actual numbers (returns 15 correctly)
+// sumArr(notArray); //testing argument as not Array (correct string return)
+// sumArr(emptyArray); //testing empty array output (correct string return)
+// sumArr(strArray); //testing numbers passed as word strings (returns NaN)
+// sumArr(numStrArr); //testing numbers passed as strings (returns 15 correctly)
