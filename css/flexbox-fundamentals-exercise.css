@@ -10,7 +10,7 @@ body {
 h1 {text-align: center;}
 
 h2, h3 {
-    padding: 0;
+    padding: .5em 0em;
     margin: 0;
 }
 
@@ -33,20 +33,27 @@ h2, h3 {
     background: white;
     padding: 1em;
     margin: 0 auto;
-    /* enter needed declarations here */
+    /*sets all sections to row by default*/
+    display: flex;
+    /*organizes each 'section' below in a column*/
+    flex-direction: column;
 }
 
 section {
-    /* enter needed declarations here */
+    /*need to re-establish display:flex for specific boxes*/
+    display: flex;
 }
 
 section:nth-of-type(1) {
     height: 3em;
     background: lightgreen;
-    /* enter needed declarations here */
+    justify-content: space-between;
+    /*moves green rectangles to center of light green box*/
+    align-items: center;
 }
 section:nth-of-type(1) div:last-child {
-    /* enter needed declarations here */
+    /*moves the last green box to the top of the light green container*/
+    align-self: flex-start;
 }
 
 .purple-box {
@@ -56,17 +63,21 @@ section:nth-of-type(1) div:last-child {
 }
 
 .purple-box:nth-of-type(1) {
-    /* enter needed declarations here */
+    /*increases the size of the first purple box*/
+    flex-grow: 2;
 }
 
 .purple-box:nth-of-type(2) {
-    /* enter needed declarations here */
+    /* increases the size of the second purple box but less than the first*/
+    flex-grow: 1;
 }
 
 .blue-box {
     width: 100%;
     background: blue;
     height: 10em;
+    /*added some needed spacing above and below this blue box*/
+    margin: 1em 0em;
 }
 
 section:nth-of-type(3) {
@@ -90,7 +101,8 @@ section:nth-of-type(3) h3 {
     height: 5em;
     width: 5em;
     background: brown;
-    /* enter needed declarations here */
+    /*makes each brown box even across width and slightly larger to fill*/
+    flex-grow: 1;
 }
 
 .large-brown-box:nth-of-type(2) {
@@ -98,7 +110,10 @@ section:nth-of-type(3) h3 {
 }
 
 section:nth-of-type(5) {
-    /* enter needed declarations here */
+    /*separates the yellow squares with proper spacing horizontally*/
+    justify-content: space-around;
+    /*needed a margin for proper spacing above & below yellow squares*/
+    margin: 1em 0em;
 }
 
 .yellow-box {
@@ -110,7 +125,11 @@ section:nth-of-type(5) {
 section:nth-of-type(6) {
     background: coral;
     height: 14em;
-    /* enter needed declarations here */
+    /*allows grey squares to wrap throughout coral container*/
+    flex-wrap: wrap;
+    /*adds spacing between grey squares and pushes to outer edges of coral box*/
+    justify-content: space-between;
+    align-items: center;
 }
 
 .grey-box {
