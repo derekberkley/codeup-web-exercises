@@ -77,15 +77,20 @@ section:nth-of-type(1) div:last-child {
     background: blue;
     height: 10em;
     /*added some needed spacing above and below this blue box*/
-    margin: 1em 0em;
+    margin-top: 1em;
 }
 
 section:nth-of-type(3) {
-    /* enter needed declarations here */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 1em 0em;
+
 }
 
 section:nth-of-type(3) h3 {
     /* enter needed declarations here */
+    flex-grow: 1;
 
 }
 
