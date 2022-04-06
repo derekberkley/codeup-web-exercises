@@ -47,6 +47,7 @@ section {
 section:nth-of-type(1) {
     height: 3em;
     background: lightgreen;
+    /*spreads the dark green boxes from end to end*/
     justify-content: space-between;
     /*moves green rectangles to center of light green box*/
     align-items: center;
@@ -54,6 +55,13 @@ section:nth-of-type(1) {
 section:nth-of-type(1) div:last-child {
     /*moves the last green box to the top of the light green container*/
     align-self: flex-start;
+    /*-------*/
+    /*Why doesn't align-items work if youre addressing 1 specific element?*/
+    /*------*/
+}
+
+.card h2 {
+    margin: .1em 0em;
 }
 
 .purple-box {
@@ -81,17 +89,16 @@ section:nth-of-type(1) div:last-child {
 }
 
 section:nth-of-type(3) {
-    display: flex;
+    /*pushes h3 and orange circle to opposite sides*/
     justify-content: space-between;
+    /*centers h3???*/
     align-items: flex-end;
     margin: 1em 0em;
-
 }
 
 section:nth-of-type(3) h3 {
-    /* enter needed declarations here */
+    /*increases size of h3 and 'pushes' circles to right side*/
     flex-grow: 1;
-
 }
 
 .orange-circle {
@@ -116,7 +123,7 @@ section:nth-of-type(3) h3 {
 
 section:nth-of-type(5) {
     /*separates the yellow squares with proper spacing horizontally*/
-    justify-content: space-around;
+    justify-content: space-evenly;
     /*needed a margin for proper spacing above & below yellow squares*/
     margin: 1em 0em;
 }
@@ -134,6 +141,7 @@ section:nth-of-type(6) {
     flex-wrap: wrap;
     /*adds spacing between grey squares and pushes to outer edges of coral box*/
     justify-content: space-between;
+    /*aligns each box on its horizontal line, adding space on top and bottom*/
     align-items: center;
 }
 
