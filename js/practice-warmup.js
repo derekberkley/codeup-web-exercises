@@ -335,3 +335,29 @@ sortArr(exampleArray);
 //  efficient to remove duplicates and then sort?)
 //  if your array has non-numbers can you still sort the numbers?
 //  ex: input: [3,“b”,8,5,9,true”, 4,“xyz”] expected output: [3,4,5,8,9];
+
+
+
+
+
+//TODO: Write a function that accepts a string and returns a map with the strings
+// character frequency.
+// example input: [“b”, “a”, “n”, “a”, “n”, “a”];
+// expected output: { b: 1, a: 3, n: 2 }
+
+var input = ["b", "a", "n", "a", "n", "a"];
+var finalObj = {};
+
+// use a for ... of loop to iterate over the array
+for (const element of input) {
+    //if the declared object has the element in it...
+    if(finalObj[element]) {
+        //increment/increase the object's count by 1
+        finalObj[element] += 1;
+    } else {
+        //if obj doesn't have element, assigned the key_value pair as element = 1.
+        finalObj[element] = 1;
+    }
+}
+
+console.log(finalObj);
