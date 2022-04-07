@@ -42,7 +42,7 @@ a:hover {
     padding: .2em 0em;
     color: black;
     font-family: Montserrat, Sans-Serif;
-    align-self: center;
+    margin: auto;
     box-sizing: border-box;
 }
 

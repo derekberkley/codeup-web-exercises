@@ -361,3 +361,17 @@ for (const element of input) {
 }
 
 console.log(finalObj);
+
+
+//-----------
+
+//Define the function with proper syntax and 2 arguments
+// check if the first argument contains the second argument
+
+function twoStrings(string1, string2) {
+    if (string1.includes(string2)) {
+        var first = string1.split("");
+        var second = first.pop(string2.split(""));
+
+    }
+}
