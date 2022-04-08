@@ -364,14 +364,24 @@ console.log(finalObj);
 
 
 //-----------
+// Create a function that takes in two string inputs.
+// -- If the second string input is present in the first, return the first input
+// string with the second input string removed from it.
+// -- If the second string input is present multiple times in the first, the second
+// string will only be removed where it first occurs in the first string.
+// -- If the second string input is not present in the first, return the first string
+// as entered in the function.
 
-//Define the function with proper syntax and 2 arguments
-// check if the first argument contains the second argument
+function twoStrings(arg1, arg2) {
 
-function twoStrings(string1, string2) {
-    if (string1.includes(string2)) {
-        var first = string1.split("");
-        var second = first.pop(string2.split(""));
-
+    for (var word of arg2) {
+        if (arg1.indexOf(word)) {
+            result = arg1.replace(arg2, "");
+        }
+        return result;
     }
 }
+
+twoStrings("hello, world!", "world");
+
+
