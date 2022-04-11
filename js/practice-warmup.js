@@ -389,31 +389,43 @@ twoStrings("hello, world!", "world");
 // Recommend starting your loop at 1 and ending your loop once you've calcualted 50 primes.
 
 
-var count = 0;
+// var count = 0;
+// var primeArray = [];
+// var i;
+// var j;
+//
+// for (j = 2; j <= 230; j++) {
+//         for (i = 1; i <= j; i++) {
+//             //goes through all #s until j to assess if # is Prime
+//             if (j % i == 0) {
+//                 count++;
+//             }
+//         }
+//         //if # is ONLY divisible by 1 and self then push to Array of Primes
+//         if (count == 2) {
+//             primeArray.push(j);
+//         }
+//         //reset count to 0 for next prime # assessment
+//         count = 0;
+//
+// }
+//
+// console.log(primeArray);
+
 var primeArray = [];
-var i;
-var j;
+var count = 0;
+var j = 2;
 
-for (j = 2; j <= 230; j++) {
-        for (i = 1; i <= j; i++) {
-            //goes through all #s until j to assess if # is Prime
-            if (j % i == 0) {
-                count++;
-            }
-        }
-        //if # is ONLY divisible by 1 and self then push to Array of Primes
-        if (count == 2) {
-            primeArray.push(j);
-        }
-        //reset count to 0 for next prime # assessment
-        count = 0;
-
-}
+do {
+    for (var i = 1; i <= j; i++) {
+        (j % i === 0) ? count++ : false;
+    }
+    (count === 2) ? primeArray.push(j) : false;
+    count = 0;
+    j += 1;
+} while (primeArray.length < 50);
 
 console.log(primeArray);
-
-
-
 
 
 
