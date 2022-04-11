@@ -385,3 +385,36 @@ function twoStrings(arg1, arg2) {
 twoStrings("hello, world!", "world");
 
 
+// Write the code necessary to output the first 50 prime numbers
+// Recommend starting your loop at 1 and ending your loop once you've calcualted 50 primes.
+
+
+var final = [];
+
+    for (var i = 2; i > 0; i++) {
+        if (final.length === 50) {
+            break;
+        } else if (i === 2 || i === 3) {
+            final.push(i);
+            continue;
+            // this doesn't account for all numbers able to be divided by a prime #
+            // need a forEach loop to check existing #'s in 'final' array
+        } else if (i % 2 !== 0 && i % 3 !==0) {
+            final.push(i);
+            continue;
+        } else {
+        continue;
+        }
+    };
+
+console.log(final);
+
+
+
+
+
+
+
+
+
+
