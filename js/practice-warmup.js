@@ -388,47 +388,33 @@ twoStrings("hello, world!", "world");
 // Write the code necessary to output the first 50 prime numbers
 // Recommend starting your loop at 1 and ending your loop once you've calcualted 50 primes.
 
-
-// var count = 0;
-// var primeArray = [];
-// var i;
-// var j;
-//
-// for (j = 2; j <= 230; j++) {
-//         for (i = 1; i <= j; i++) {
-//             //goes through all #s until j to assess if # is Prime
-//             if (j % i == 0) {
-//                 count++;
-//             }
-//         }
-//         //if # is ONLY divisible by 1 and self then push to Array of Primes
-//         if (count == 2) {
-//             primeArray.push(j);
-//         }
-//         //reset count to 0 for next prime # assessment
-//         count = 0;
-//
-// }
-//
-// console.log(primeArray);
+//--Answer--
+// 1. for each iteration (i): checks every number from 1 to the
+//      potential Prime # for its divisibility
+// 2. if there is no remainder (modulus) then record a success case
+//      (+1 to count variable)
+// 3. Prime #'s should be divisible by 1 and itself (count = 2)
+//      if count is < or > 2 then potentialPrime is NOT prime
+// 4. When count = 2, push the now confirmed prime # to the empty array
+// 5. Before going to the next # to test, reset the count to 0 and
+//      increment potentialPrime to test the next integer
+// 6. Continue to test all #'s until the array has 50 prime #'s
+// 7. Console.log the array for awesome results!
 
 var primeArray = [];
 var count = 0;
-var j = 2;
+var potentialPrime = 2;
 
 do {
-    for (var i = 1; i <= j; i++) {
-        (j % i === 0) ? count++ : false;
+    for (var i = 1; i <= potentialPrime; i++) {
+        (potentialPrime % i === 0) ? count++ : false;
     }
-    (count === 2) ? primeArray.push(j) : false;
+    (count === 2) ? primeArray.push(potentialPrime) : false;
     count = 0;
-    j += 1;
+    potentialPrime += 1;
 } while (primeArray.length < 50);
 
 console.log(primeArray);
-
-
-
 
 
 

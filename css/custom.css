@@ -1,0 +1,11 @@
+.form-inline {
+    padding-left: 1em;
+}
+
+.nav-item {
+    display: flex;
+}
+
+.sign-up {
+    flex-grow: 1;
+}
