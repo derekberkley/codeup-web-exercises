@@ -416,6 +416,21 @@ do {
 
 console.log(primeArray);
 
+// Write a function that takes two arrays as arguments
+// Merge both arrays and remove duplicate values
+// Sort the merge result in ascending order
+// Return the resulting array
 
+var randomThings = [ 1, 3.5, 7, "blue", true, "five"];
+var moreRandoThings = [2, 5, 7, "red", true, false, "coffee"];
 
+function merge(arry1, arry2) {
+    arry2.forEach(function(element) {
+        //checking if 1st array contains each element from 2nd array before merging that element
+        (arry1.includes(element)) ? false : arry1.push(element);
+    });
+    //sort method auto sorts numbers in ascending and words alphabetically
+    return arry1.sort();
+};
 
+merge(randomThings, moreRandoThings);
