@@ -1,11 +1,39 @@
-/*.form-inline {*/
-/*    padding-left: 1em;*/
-/*}*/
+.jumbotron {
+    background-image: url("../html/images/pizza.png");
 
-/*.nav-item {*/
-/*    display: flex;*/
-/*}*/
-
-/*.sign-up {*/
-/*    flex-grow: 1;*/
-/*}*/
+}
+/*added an id to alter this h1's container instead of all .container classes*/
+#jumbo-header-container {
+    /*container class has pre-set max widths preventing this from going 100%*/
+    /*re-set max-width to 100% instead of changing the class*/
+    /*container-fluid class already has pre-set width 100% for all screen sizes*/
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+/*added an id to alter this header text specifically instead of ALL h1's*/
+#jumbo-header {
+    /*is this the best way to over write bootstrap?*/
+    /*what is the flexbox solution for this since it is a direct child of .container?*/
+    /*h1 has a pre-determined class of display-4 which is left-aligned...*/
+    text-align: center;
+    background-color: white;
+    opacity: .6;
+    width: 100%;
+}
+#choose {
+    background-color: #007BFF;
+    color: white;
+}
+.card-footer:last-child {
+    text-align: right;
+}
+#selection-card {
+    width: 100%;
+}
+#inlineFormCustomSelectPref {
+    width: 100%;
+}
+#dropdown-question {
+    margin-bottom: 0em;
+}

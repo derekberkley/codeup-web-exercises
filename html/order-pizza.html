@@ -5,28 +5,37 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Pizza Order</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <!-- Your custom css styles go here -->
-<!--    <link rel="stylesheet" href="../css/custom.css">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
+    <!-- Your custom css styles go here -->
+        <link rel="stylesheet" href="../css/custom.css">
 
 
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Pizza World</a>
+
+        <!-- Not sure what this button does... removal and labels don't change output in Chrome...-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
+
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link active" href="#">Order Online<span class="sr-only">(current)</span></a>
                 <a class="nav-link" href="#">Menu</a>
             </div>
+            <!-- Needed to include the search form INSIDE this div for flexbox to justify it to the left -->
+            <!-- Moving the search box outside this div will justify it to the right -->
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you!</button>
+            </form>
         </div>
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you!</button>
-        </form>
+
+        <!-- found the person icon and added it INSIDE the button tag so it would all be one clickable item -->
         <form class="form-inline">
             <button class="btn btn-sm" type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
@@ -36,7 +45,191 @@
         </form>
     </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></style>
+    <!--added 'd-none d-sm-block' as classes to hide jumbotron when on smaller screens-->
+    <div class="jumbotron jumbotron-fluid d-none d-sm-block">
+        <div class="container" id="jumbo-header-container">
+            <h1 class="display-4" id="jumbo-header">Welcome to Pizza World!</h1>
+            <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>-->
+        </div>
+    </div>
+
+
+<div class="m-4">
+
+    <h2 id="jumbo-header-two">Build Your Own Pizza!</h2>
+
+            <ul class="nav nav-tabs" id="myTab">
+                <li class="nav-item">
+                    <a href="#size-and-crust" class="nav-link active" data-toggle="tab">
+                        <span class="badge badge-pill badge-secondary">1</span>
+                    Size and Crust</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#cheese-and-sauce" class="nav-link" data-toggle="tab">
+                        <span class="badge badge-pill badge-secondary">2</span>
+                        Cheese and Sauce</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#toppings" class="nav-link" data-toggle="tab">
+                        <span class="badge badge-pill badge-secondary">3</span>
+                        Toppings</a>
+                </li>
+            </ul>
+
+<div class="tab-content" id="myTabContent">
+
+    <!-- Size and Crust Tab Content starts here -->
+    <div class="tab-pane fade show active" id="size-and-crust">
+
+        <!-- Featured Card template starts here (text-center class removed for alignment) -->
+        <div class="card">
+            <div class="card-header" id="choose">Choose Size and Crust</div> <!--Title-->
+
+            <!-- Hand Tossed sub-card starts here-->
+                <div class="card-body">
+                    <div class="card" id="selection-card">
+                        <div class="card-header">Hand Tossed</div>
+                        <div class="card-body">
+                        <p class="card-text">Garlic seasoned crust with a rich, buttery taste.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="size" id="size-sm" value="small">
+                                        <label class="form-check-label" for="size-sm">Small (10")</label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="size" id="size-md" value="medium">
+                                        <label class="form-check-label" for="size-md">Medium (12")</label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="size" id="size-lg" value="large" checked>
+                                    <label class="form-check-label" for="size-lg">Large (14")</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            <!-- Crispy Thin sub-card starts here-->
+                <div class="card-body">
+                    <div class="card" id="selection-card">
+                        <div class="card-header">Crispy Thin</div>
+                        <div class="card-body">
+                            <p class="card-text">Thin enough for optimum crispy to crunchy ratio.</p> </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="size" value="size-sm">
+                                    <label class="form-check-label" for="size-sm">Small (10")</label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="size" value="size-md">
+                                    <label class="form-check-label" for="size-md">Medium (12")</label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="size" value="size-lg" checked>
+                                    <label class="form-check-label" for="size-lg">Large (14")</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            <!-- Card Footer -->
+                <div class="card-footer text-muted">
+                    <a href="#cheese-and-sauce" class="btn btn-primary" data-toggle="tab">Next Step</a>
+                </div>
+
+        </div> <!-- End of blue card holding tab's sub content-->
+    </div> <!-- End of Size and Crust Tab sub content -->
+
+
+
+    <!-- Cheese and Sauce Tab starts here -->
+        <div class="tab-pane fade" id="cheese-and-sauce">
+
+            <!-- Featured Card template starts here (text-center class removed for alignment) -->
+            <div class="card">
+                <div class="card-header" id="choose">Choose Cheese and Sauce</div> <!--Title-->
+
+                <!-- Cheese sub-card starts here-->
+                <div class="card-body">
+                    <div class="card" id="selection-card">
+                        <div class="card-header">Cheese</div>
+                        <div class="card-body">
+                            <p class="card-text" id="dropdown-question">How Much?</p>
+
+                            <form class="form-inline">
+<!--                                <label class="my-1 mr-2" for="inlineFormCustomSelectPref"></label>-->
+                                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                    <option value="1">Light</option>
+                                    <option value="2" selected>Normal</option>
+                                    <option value="3">Extra</option>
+                                    <option value="4">Double</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+             <!-- Sauce sub-card starts here-->
+                <div class="card-body">
+                    <div class="card" id="selection-card">
+                        <div class="card-header">Sauce</div>
+                        <!-- What type of sauce sub-card starts here -->
+                        <div class="card-body">
+                            <p class="card-text" id="dropdown-question">What Type?</p>
+                            <form class="form-inline">
+<!--                                <label class="my-1 mr-2" for="inlineFormCustomSelectPref"></label>-->
+                                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                    <option value="1" selected>Tomato Sauce</option>
+                                    <option value="2">Marinara Sauce</option>
+                                    <option value="3">BBQ Sauce</option>
+                                    <option value="4">Alfredo Sauce</option>
+                                </select>
+                            </form>
+                        </div>
+                        <!-- How Much Sauce Sub-Card starts here -->
+                        <div class="card-body">
+                            <p class="card-text" id="dropdown-question">How Much?</p>
+                            <form class="form-inline">
+<!--                                <label class="my-1 mr-2" for="inlineFormCustomSelectPref"></label>-->
+                                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                    <option value="1">Light</option>
+                                    <option value="2" selected>Normal</option>
+                                    <option value="3">Extra</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+             <!-- Card Footer -->
+                <div class="card-footer text-muted">
+                    <a href="#size-and-crust" class="btn btn-primary" data-toggle="tab">Previous Step</a>
+                    <a href="#toppings" class="btn btn-primary" data-toggle="tab">Next Step</a>
+                </div>
+            </div> <!-- End of blue card holding tab's sub content-->
+        </div>
+
+        <!-- Toppings Tab starts here -->
+            <div class="tab-pane fade" id="toppings">
+                <p>toppings</p>
+
+            </div>
+</div> <!-- End of Tab Content and sub content -->
+</div> <!-- End of class="m-4" which provides margin around all content-->
+
+    <!-- These are bundles of JS plugins and extra css to accommodate nav tab functionality-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 
 </body>
 </html>
