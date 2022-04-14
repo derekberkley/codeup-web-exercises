@@ -58,19 +58,19 @@
 
     <h2 id="jumbo-header-two">Build Your Own Pizza!</h2>
 
-            <ul class="nav nav-tabs" id="myTab">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                    <a href="#size-and-crust" class="nav-link active" data-toggle="tab">
+                    <a href="#size-and-crust" id="size-and-crust-tab" class="nav-link active" data-toggle="tab" role="tab" aria-controls="size-and-crust" aria-selected="true">
                         <span class="badge badge-pill badge-secondary">1</span>
                     Size and Crust</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#cheese-and-sauce" class="nav-link" data-toggle="tab">
+                    <a href="#cheese-and-sauce" id="cheese-and-sauce-tab" class="nav-link" data-toggle="tab" role="tab" aria-controls="cheese-and-sauce" aria-selected="false">
                         <span class="badge badge-pill badge-secondary">2</span>
                         Cheese and Sauce</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#toppings" class="nav-link" data-toggle="tab">
+                    <a href="#toppings" id="toppings-tab" class="nav-link" data-toggle="tab" role="tab" aria-controls="toppings" aria-selected="false">
                         <span class="badge badge-pill badge-secondary">3</span>
                         Toppings</a>
                 </li>
@@ -79,7 +79,7 @@
 <div class="tab-content" id="myTabContent">
 
     <!-- Size and Crust Tab Content starts here -->
-    <div class="tab-pane fade show active" id="size-and-crust">
+    <div class="tab-pane fade show active" id="size-and-crust" role="tabpanel" aria-labelledby="size-and-crust-tab">
 
         <!-- Featured Card template starts here (text-center class removed for alignment) -->
         <div class="card">
@@ -89,9 +89,9 @@
                 <div class="card-body">
                     <div class="card" id="selection-card">
                         <div class="card-header">Hand Tossed</div>
-                        <div class="card-body">
-                        <p class="card-text">Garlic seasoned crust with a rich, buttery taste.</p>
-                        </div>
+                            <div class="card-body">
+                            <p class="card-text">Garlic seasoned crust with a rich, buttery taste.</p>
+                            </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">
                                 <div class="form-check">
@@ -146,18 +146,23 @@
 
             <!-- Card Footer -->
                 <div class="card-footer text-muted">
-                    <a href="#cheese-and-sauce" class="btn btn-primary" data-toggle="tab">Next Step</a>
+                        <a href="#cheese-and-sauce-tab&amp;cheese-and-sauce" class="btn btn-primary" data-toggle="tab">Next Step</a>
+
+                        <a href="#cheese-and-sauce-tab">
+                            <button type="button" class="btn btn-primary">Next Step Button</button>
+                        </a>
+
                 </div>
 
         </div> <!-- End of blue card holding tab's sub content-->
-    </div> <!-- End of Size and Crust Tab sub content -->
+    </div> <!-- End of Size and Crust Tab content container -->
 
 
 
     <!-- Cheese and Sauce Tab starts here -->
-        <div class="tab-pane fade" id="cheese-and-sauce">
+        <div class="tab-pane fade" role="tabpanel" id="cheese-and-sauce" aria-labelledby="cheese-and-sauce-tab">
 
-            <!-- Featured Card template starts here (text-center class removed for alignment) -->
+            <!-- Featured Card (blue header) template starts here (text-center class removed for alignment) -->
             <div class="card">
                 <div class="card-header" id="choose">Choose Cheese and Sauce</div> <!--Title-->
 
@@ -213,15 +218,99 @@
                 </div>
              <!-- Card Footer -->
                 <div class="card-footer text-muted">
-                    <a href="#size-and-crust" class="btn btn-primary" data-toggle="tab">Previous Step</a>
-                    <a href="#toppings" class="btn btn-primary" data-toggle="tab">Next Step</a>
+                    <a href="#size-and-crust-tab" class="btn btn-primary" data-toggle="tab">Previous Step</a>
+                    <a href="#toppings-tab" class="btn btn-primary" data-toggle="tab">Next Step</a>
                 </div>
             </div> <!-- End of blue card holding tab's sub content-->
-        </div>
+        </div> <!-- End of Cheese and Sauce content container -->
 
-        <!-- Toppings Tab starts here -->
-            <div class="tab-pane fade" id="toppings">
-                <p>toppings</p>
+<!-- Toppings Tab starts here -->
+            <div class="tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">
+
+                    <!-- Featured Card (blue header) template starts here (text-center class removed for alignment) -->
+                    <div class="card">
+                        <div class="card-header" id="choose">Choose Toppings</div> <!--Title-->
+
+                        <!-- Meats sub-card starts here-->
+                        <div class="card-body">
+                            <div class="card" id="selection-card">
+                                <div class="card-header">Choose Meats</div>
+
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="meats" id="beef" value="small">
+                                                    <label class="form-check-label" for="beef">Beef</label>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="meats" id="ham" value="ham">
+                                                    <label class="form-check-label" for="ham">Ham</label>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="meats" id="philly" value="philly">
+                                                    <label class="form-check-label" for="philly">Philly Steak</label>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="meats" id="bacon" value="bacon">
+                                                    <label class="form-check-label" for="bacon">Bacon</label>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                            </div>
+
+
+                        <!-- Non-meats Selection sub-card starts here -->
+                        <div class="card-body">
+                            <div class="card" id="selection-card">
+                                <div class="card-header">Choose Non-Meats</div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="non-meats" id="green-peppers" value="green-peppers">
+                                            <label class="form-check-label" for="green-peppers">Green Peppers</label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="non-meats" id="mushrooms" value="mushrooms">
+                                            <label class="form-check-label" for="mushrooms">Mushrooms</label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="non-meats" id="onions" value="onions">
+                                            <label class="form-check-label" for="onions">Onions</label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="non-meats" id="jalepeno" value="jalepeno">
+                                            <label class="form-check-label" for="jalepeno">Jalepeno</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- Card Footer -->
+                        <div class="card-footer text-muted">
+                            <a href="#cheese-and-sauce-tab" class="btn btn-primary" data-toggle="tab">Previous Step</a>
+                            <a href="#" class="btn btn-primary" data-toggle="tab">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                </svg>
+                            Checkout</a>
+                        </div>
+                    </div> <!-- End of blue card holding tab's sub content-->
+                </div>
 
             </div>
 </div> <!-- End of Tab Content and sub content -->
