@@ -443,16 +443,43 @@ merge(randomThings, moreRandoThings);
 var tryMe = [{a:1,b:2},{a:5,b:4}]
 // expected output: [{a:1,b:2},{a:5,b:4}]
 
-function sortThisThing(arrObj) {
-    arrObj.sort(function(arrObj[a].b, arrObj[b].b);
-    {
-        return arrObj[a].b - arrObj[b].b;
-    };
-)};
-    sortThisThing(tryMe);
+// function sortThisThing(arrObj) {
+//     arrObj.sort(function(arrObj[a].b, arrObj[b].b);
+//     {
+//         return arrObj[a].b - arrObj[b].b;
+//     };
+// )};
+//     sortThisThing(tryMe);
 
     array.sort(x, y) {
     if(x.b < y.b) {
         return -1;
     }
     }
+
+// 1. Rewrite the following using a for loop:
+// var i = 20;
+// while (i >= 0) {
+//     console.log(i);
+//     i--;
+// }
+
+for (var i = 20; i >= 0; i--) {
+    console.log(i);
+}
+
+// 2. Write a function that takes an object (a) as argument and returns an array with all object keys
+// example input: {a:1,b:2,c:3}
+// expected output: ['a','b','c']
+// ------------------------
+//     example input:{j:9,i:2,x:3,z:4}
+// expected output: ['j','i','x','z']
+
+var testObj = {a:1, b:2, c:3, d:4, e:5};
+
+var emptyArr = [];
+
+function allTheKeys(obj) {
+    return Object.keys(obj);
+}
+allTheKeys(testObj);
