@@ -1,21 +1,21 @@
 // //TODO: Write a javascript function that accepts the 3 lengths of a triangle and outputs the triangle’s area.
-//
-// function pythagorean(side1, side2, side3) {
-//
-//     //calculate the semi-perimeter first
-//     var semiPer = (side1 + side2 + side3) / 2;
-//
-//     //using Heron's Formula since only know 3 sides of triangle
-//     var area = Math.sqrt(semiPer * (semiPer - side1) * (semiPer - side2) * (semiPer - side3));
-//
-//     //Area of Triangle Formula if had other info
-//     // var triArea = (base * height) * 0.5
-//
-//     console.log("The area of the triangle is: " + area);
-//     return area;
-// }
-//
-// pythagorean(3, 4, 5);
+
+function pythagorean(side1, side2, side3) {
+
+    //calculate the semi-perimeter first
+    var semiPer = (side1 + side2 + side3) / 2;
+
+    //using Heron's Formula since only know 3 sides of triangle
+    var area = Math.sqrt(semiPer * (semiPer - side1) * (semiPer - side2) * (semiPer - side3));
+
+    //Area of Triangle Formula if had other info
+    // var triArea = (base * height) * 0.5
+
+    console.log("The area of the triangle is: " + area);
+    return area;
+}
+
+pythagorean(3, 4, 5);
 
 //TODO: Fizzbuzz Activity
 // Print numbers 1-100.
@@ -483,3 +483,41 @@ function allTheKeys(obj) {
     return Object.keys(obj);
 }
 allTheKeys(testObj);
+
+// 1. Write a function that iterates through numbers 1 and 15 and returns the numbers that are divisible by 3 (hint hint hint: learn how to use a modulus)
+
+function divideByThree(input) {
+    for(var i = 1; i <= input; i++) {
+        (i % 3 === 0) ? console.log(i, " is divisible by 3.") : false;
+    }
+}
+
+divideByThree(15);
+
+// 2. Write a function that takes a Set and an array as arguments. If not already existing,
+// add each element in the array to the Set. Return the modified Set
+
+//
+// example input: new Set([1, 2, 3]), [4, 5, 6]
+// expected output: new Set([1, 2, 3, 4, 5, 6 ])
+// -------------------------
+//     example input:new Set([1, 2, 3]), [2, 3]
+// expected output: new Set([1, 2, 3])
+// -------------------------
+
+var collection = new Set([1, 2, 3]);
+var randomArray = [4, 5, 6];
+var collection2 = new Set([1, 2, 3]);
+var randomArray2 = [2, 3];
+
+function addThings(thisSet, thisArray) {
+    thisArray.forEach(function (element) {
+        (thisSet.has(element)) ? false : thisSet.add(element);
+    });
+    return thisSet;
+}
+
+addThings(collection, randomArray);
+addThings(collection2, randomArray2);
+
+
