@@ -521,3 +521,27 @@ addThings(collection, randomArray);
 addThings(collection2, randomArray2);
 
 
+// Write a function that takes an object as argument
+// Swap the Javascript object's key with its values and return the resulting object
+
+var exampleObj = {z:'a', y:'b',x:'c',w:'d'}
+
+function swapKeyValue(obj) {
+    return Object.entries(obj).map(([key, value]) => [value, key]);
+}
+
+swapKeyValue(exampleObj);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
