@@ -532,9 +532,11 @@ function swapKeyValue(obj) {
 
 swapKeyValue(exampleObj);
 
+//---------------------------------------------------
 
-
-
+function salesTax(purchaseList) {
+    purchaseList[].price
+}
 
 
 
