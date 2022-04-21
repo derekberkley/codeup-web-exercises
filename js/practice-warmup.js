@@ -533,17 +533,43 @@ function swapKeyValue(obj) {
 swapKeyValue(exampleObj);
 
 //---------------------------------------------------
+// Write a function that takes an array of objects and a string as arguments
+// Add a property with key 'continent' and value equal to the string to each of the objects
+// Return the new array of objects
+// Tipp: try not to mutate the original array
+//
+var origCities = [{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }];
+var addMe = 'Asia';
 
-function salesTax(purchaseList) {
-    purchaseList[].price
+//declare an empty array so as to not mutate the original array
+let plusContinent = [];
+
+//define the function that takes an array of objects and a string
+function continent(arrOfObjs, str) {
+
+    //for each object(element) within the array...
+    arrOfObjs.forEach(function(indivObj) {
+
+        //add continent as the property name and use the string input to add the value to each object
+        indivObj.continent = str;
+
+        //push the updated object to the new array as its element
+        plusContinent.push(indivObj);
+    })
+    // after all new objects are pushed to new array, return the new array
+    return plusContinent;
 }
+continent(origCities, addMe);
 
 
+//---------------------------------------------------
+// TODO: Add 'strawberry' to the beginning, middle, and end of the array
+var fruits = ["mango", "blueberries", "oranges", "banana", "papaya", "kiwi"];
 
-
-
-
-
-
-
+//.unshift() adds an element to the start of the array
+fruits.unshift('strawberry');
+//.push() adds an element to the end of the array
+fruits.push('strawberry');
+//.splice() method as below adds element to middle of array, does not delete anything, and gives the element to be added
+fruits.splice((fruits.length / 2), 0, 'strawberry');
 
