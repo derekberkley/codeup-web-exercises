@@ -573,3 +573,34 @@ fruits.push('strawberry');
 //.splice() method as below adds element to middle of array, does not delete anything, and gives the element to be added
 fruits.splice((fruits.length / 2), 0, 'strawberry');
 
+//---------------------------------------------------
+// Write a function that takes an array (a) as argument
+// Extract the first 3 elements of a
+// Return the resulting array
+
+var itsFriday = ['green', 'coffee', 'TGIF', 'play music', 'weekend'];
+
+function extractThree(array) {
+    return array.splice(0, 3);
+}
+
+extractThree(itsFriday);
+
+// //---------------------------------------------------
+// 2.  Write an object that describes which brands own which cereals (you can be creative here) . After the object has been declared …
+// A) add properties and values to the existing object
+// B) re-assign 2 properties’ values
+
+var breakfastCereals = {
+    kellogg : 'fruit loops',
+    generalMills : 'wheaties',
+    post : 'honey bunches of oats',
+};
+
+//adding new property and value to the object
+breakfastCereals.quaker = 'cap\'n crunch crunch berries';
+//changing the value of two properties
+breakfastCereals.generalMills = 'lucky charms';
+breakfastCereals.post = "fruity pebbles";
+
+console.log(breakfastCereals);
