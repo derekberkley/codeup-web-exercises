@@ -441,6 +441,7 @@ merge(randomThings, moreRandoThings);
 // Return the sorted array
 
 var tryMe = [{a:1,b:2},{a:5,b:4}]
+// example input: [{a:1,b:2},{a:5,b:4}]
 // expected output: [{a:1,b:2},{a:5,b:4}]
 
 // function sortThisThing(arrObj) {
@@ -604,3 +605,102 @@ breakfastCereals.generalMills = 'lucky charms';
 breakfastCereals.post = "fruity pebbles";
 
 console.log(breakfastCereals);
+
+
+
+
+var exampleArray2 = [9, 5, 3, -5, 'four', 0, -23, .5, 3, 3, -2.5, 'xyz'];
+
+function sortArr(input) {
+    var tempArray = [];
+
+    if(Array.isArray(input)) {
+        //use forEach to check every element for duplicates
+        input.forEach(function(element) {
+            console.log(element);
+            var index = input.indexOf(element);
+            //if the
+            if (tempArray.includes(element) === false && typeof(element) === 'number') {
+                tempArray.push(element);
+            } else {
+                input.splice(index, 0);
+            }
+        });
+    } else {
+        return false;
+    }
+    return tempArray.sort((a, b) => a - b);
+}
+
+sortArr(exampleArray2);
+
+var array = ['John', 'Paul', 'George', 'Ringo'];
+array.splice(array.indexOf('Ringo'), 0, 'Yoko');
+array.unshift('Yoko');
+
+
+console.log(array);
+
+// TODO: Write a function that takes an array of numbers as argument and returns the number of negative values in the array.
+// example Input: [1,-2,2,-4]
+// expected output: 2
+
+var assortedArray = [-100, -53, -7, -.86, 0, 2, 23, 78, 135];
+
+function howManyNegs(arg) {
+    var count = 0;
+    arg.forEach(function(element) {
+        (element < 0) ? count += 1 : false;
+    });
+    return count;
+}
+ howManyNegs(assortedArray);
+
+
+
+//---------------------------------------------------
+//TODO: Write a function that takes two date instances as arguments. It should return the number
+// of days that lies between those dates.
+// example input: new Date('2020-06-11'), new Date('2020-06-01')
+// expected output: 10
+
+const today = new Date (2022, 3, 27); //monthIndex has January starting at 0 NOT 1.
+const future = new Date (2022, 7, 1);
+
+function daysBetween(date1, date2) {
+    console.log(today);
+    console.log(future);
+    var difference = date2.getTime() - date1.getTime();
+    var numDays = difference / (1000 * 3600 * 24);
+    return numDays;
+}
+
+daysBetween(today, future);
+
+//---------------------------------------------------
+// TODO: Write a function that takes an array (a) and a number (b) as arguments. Sum up all array
+//  elements with a value greater than b. Return the sum.
+// example input: [1, 2, 3, 4, 5, 6, 7], 2
+// expected output: 25
+
+var testArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var testNum = 4;
+
+function addElements (a, b) {
+    var sum = 0;
+    a.forEach(function(el) {
+        (el > b) ? sum += el : false;
+        });
+    return sum;
+};
+
+addElements(testArr, testNum);
+
+
+
+
+
+
+
+
+
