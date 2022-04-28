@@ -683,7 +683,7 @@ daysBetween(today, future);
 // example input: [1, 2, 3, 4, 5, 6, 7], 2
 // expected output: 25
 
-var testArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var testArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var testNum = 4;
 
 function addElements (a, b) {
@@ -697,10 +697,28 @@ function addElements (a, b) {
 addElements(testArr, testNum);
 
 
+//---------------------------------------------------
+// Write a function that takes an array (a) and a value (n) as arguments
+// Save every nth element in a new array
+// Return the new array
 
+var testArr2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var testNum2 = 3;
 
+function toTheNth(a, n) {
+    var b = [];
+       for (var i = n; i < a.length; i += n) {
+           b.push(a[i]);
+       }
+       return b;
+}
 
+(a, n) => {
+    var b = [];
+    for (var i = n; i < a.length; i += n) {
+        b.push(a[i]);
+    }
+    return b;
+}
 
-
-
-
+toTheNth(testArr2, testNum2);
