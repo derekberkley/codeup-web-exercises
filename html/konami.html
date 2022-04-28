@@ -10,9 +10,17 @@
 <script>
     "use strict";
 
+    var keyNums = "";
+    const konami = '3838404037393739666513';
+
     $(document).keyup(function(event){
-        console.log(event.keyCode);
+        keyNums += event.keyCode;
+        console.log(keyNums);
+        (keyNums === konami) ? alert("You have added 30 lives!") : false ;
+
     });
+
+
 </script>
 </body>
 </html>
