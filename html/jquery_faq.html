@@ -42,6 +42,7 @@
         <dd class="invisible">There are two ways to plan a national park vacation. You can choose a special tour operator that will map out your itinerary for you or you can organize the trip on your own. Both options have valid advantages. </dd>
     </dl>
 
+    <!--TODO: Under the FAQ, add 3 unordered lists like above. Each list should contain a national park name in an h3 element, and a ul of 4 facts about the park.-->
     <h3>Big Bend National Park, Texas</h3>
     <ul>
         <li>The name Big Bend comes from a large bend in the Rio Grande River along the park boundary.</li>
@@ -58,6 +59,7 @@
         <li>When Guadalupe National Park opened in 1971 there were just over 27,000 visitors. In 2012 there were 159,360 visitors to the park.</li>
     </ul>
 
+
     <h3>Padre Island National Park, Texas</h3>
     <ul>
         <li>The Spanish shipwrecks of 1554 found in the park are among the oldest shipwrecks in the U.S.</li>
@@ -65,6 +67,8 @@
         <li>The National Seashore is well known for its Little Shell and Big Shell beaches. Little Shell is located on the island's north shore, where currents deposit smaller shells, while Big Shell's shores on the southern end have larger deposits, according to NPS.</li>
         <li>Padre Island has been owned by four countries — Spain, Mexico, the Republic of Texas and the U.S. — since the late 15th Century.</li>
     </ul>
+
+    <button type="button" class="btn">Highlight Last Item</button>
 
 
 
@@ -81,6 +85,21 @@
             $(this).toggleClass("highlight");
             $(this).toggleClass("bolder");
         });
+
+        //TODO: Create a button that, when clicked, makes the last li in each ul have a yellow background.
+        $(".btn").click(function() {
+            $("ul > li:nth-child(4)").css("background", "#FF0");
+        });
+
+        //TODO: When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+        $("h3").click(function() {
+            $("h3").next("ul").children().css("font-weight", "bold");
+        });
+
+        //TODO: When any list item is clicked, first li of the parent ul should have a font color of blue.
+        $("li").click(function() {
+            $(this).parent().children().first().css("color", "blue");
+        })
     </script>
 </body>
 </html>
