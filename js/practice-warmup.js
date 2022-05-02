@@ -740,7 +740,7 @@ function firstThree(a) {
     return strToArr.join('');
 }
 
-//use substring method to immediately remove first three characters from string.
+//use substring method to immediately remove first three charactersdeathstar  from string.
 function lessThree(a) {
     return a.substring(3);
 }
