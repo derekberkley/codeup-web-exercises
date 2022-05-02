@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
+
+        /*TODO: Create some CSS rules that sets elements with the invisible class to visibility: hidden;.*/
         .invisible {
             visibility: hidden;
         }
@@ -19,6 +22,9 @@
 <body>
 
     <h2 id="answers">National Parks FAQ (Click me for Answers)</h2>
+
+    <!-- TODO: In a HTML structure, create a definition list containing 10 FAQs about national parks.-->
+    <!-- TODO: Add a class to all dd elements named invisible. -->
     <dl>
         <dt>How many national parks are there total in the United States?</dt>
         <dd class="invisible">There are currently 63 national parks in the United States. </dd>
@@ -41,6 +47,7 @@
         <dt>What’s the best way to plan my trip to a national park?</dt>
         <dd class="invisible">There are two ways to plan a national park vacation. You can choose a special tour operator that will map out your itinerary for you or you can organize the trip on your own. Both options have valid advantages. </dd>
     </dl>
+
 
     <!--TODO: Under the FAQ, add 3 unordered lists like above. Each list should contain a national park name in an h3 element, and a ul of 4 facts about the park.-->
     <h3>Big Bend National Park, Texas</h3>
@@ -70,17 +77,54 @@
 
     <button type="button" class="btn">Highlight Last Item</button>
 
+<!-- TODO: Create 3 divs that each look like a picture frame. Each one should have a unique background image and a button underneath that swaps the image from the frame.-->
 
+    <div class="container justify-content-center">
+        <div class="row justify-content-center">
+            <h1>jQuery Traversing</h1>
+        </div>
+        <div class="row w-100 mt-2" id="bonus">
+            <div class="col-4 text-center bonus-pic py-2" id="pic1">
+                <img src="../html/images/img2-frog.jpeg" style="height:200px; width:300px; border:5px solid gray">
+            </div>
+            <div class="col-4 text-center bonus-pic py-2" id="pic2">
+                <img src="../html/images/img3-catmouse.jpeg" style="height:200px; width:300px; border:5px solid gray">
+            </div>
+            <div class="col-4 text-center bonus-pic py-2" id="pic3">
+                <img src="../html/images/img1-monkey.jpeg" style="height:200px; width:300px; border:5px solid gray">
+            </div>
+        </div>
+        <div class="row w-100 mb-5">
+            <div class="col-4 text-center bonus-pic py-2">
+                <button type="button" class="btn btn-outline-dark mt-2" id="rule1">Rule 1</button>
+            </div>
+            <div class="col-4 text-center bonus-pic py-2">
+                <button type="button" class="btn btn-outline-dark mt-2" id="rule2">Rule 2</button>
+            </div>
+            <div class="col-4 text-center bonus-pic py-2">
+                <button type="button" class="btn btn-outline-dark mt-2" id="rule3">Rule 3</button>
+            </div>
+        </div>
+    </div>
 
     <!--jQuery always goes before JavaScript tag-->
+    <!-- NEED jQuery IF YOU WANT TO USE jQuery -->
     <script src="../js/jquery-2.2.4.js"></script>
+
+
+    <!-- Question 1: Which element do you want to effect? -->
+    <!-- Question 2: What are we doing to the element selected? -->
+    <!-- Question 3: -->
+
     <script>
         "use strict";
 
+        //TODO: Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.
         $("#answers").click(function() {
             $("dd").toggleClass("invisible");
         });
 
+        //TODO: (Bonus) When any of the dt elements is clicked, the element that was clicked should be highlighted.
         $("dt").click(function() {
             $(this).toggleClass("highlight");
             $(this).toggleClass("bolder");
@@ -100,6 +144,32 @@
         $("li").click(function() {
             $(this).parent().children().first().css("color", "blue");
         })
+
+        $("ol").click(function() {
+            $("ol").each(function() {
+                console.log($(this));
+                $(this).children().first().css("border", "2px solid red");
+            });
+        });
+
+        //TODO: The left frame swaps to the right and takes the image from the frame in the center.
+        $("#rule1").click(function() {
+            $("#bonus").children().first().html("");
+            $("#bonus").children().first().next().html("");
+        })
+
+        //TODO: The center frame swaps randomly to either the left or right.
+        $("#rule2").click(function() {
+            $("#bonus").children().first().html("<img src=\"../html/images/img3-catmouse.jpeg\" style=\"height:200px; width:300px; border:5px solid gray\"><button type=\"button\" class=\"btn btn-outline-dark mt-2\" id=\"rule1\">Rule 1</button>");
+        })
+
+        // TODO: The right frame swaps to the left and takes the image from the frame in the center.
+
+
     </script>
+    <!-- Bootstrap References -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
