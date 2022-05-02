@@ -75,26 +75,26 @@
         <li>Padre Island has been owned by four countries — Spain, Mexico, the Republic of Texas and the U.S. — since the late 15th Century.</li>
     </ul>
 
-    <button type="button" class="btn">Highlight Last Item</button>
+    <button type="button" class="btn" id="highlight-btn">Highlight Last Item</button>
 
 <!-- TODO: Create 3 divs that each look like a picture frame. Each one should have a unique background image and a button underneath that swaps the image from the frame.-->
 
-    <div class="container justify-content-center">
-        <div class="row justify-content-center">
+    <div class="container w-75 justify-content-center">
+        <div class="row d-flex justify-content-center">
             <h1>jQuery Traversing</h1>
         </div>
-        <div class="row w-100 mt-2" id="bonus">
+        <div class="row mt-2" id="bonus">
             <div class="col-4 text-center bonus-pic py-2" id="pic1">
-                <img src="../html/images/img2-frog.jpeg" style="height:200px; width:300px; border:5px solid gray">
+                <img src="../html/images/img2-frog.jpeg" class="w-100 h-100" style="border:5px solid gray">
             </div>
             <div class="col-4 text-center bonus-pic py-2" id="pic2">
-                <img src="../html/images/img3-catmouse.jpeg" style="height:200px; width:300px; border:5px solid gray">
+                <img src="../html/images/img3-catmouse.jpeg" class="w-100 h-100"  style="border:5px solid gray">
             </div>
             <div class="col-4 text-center bonus-pic py-2" id="pic3">
-                <img src="../html/images/img1-monkey.jpeg" style="height:200px; width:300px; border:5px solid gray">
+                <img src="../html/images/img1-monkey.jpeg" class="w-100 h-100"  style="border:5px solid gray">
             </div>
         </div>
-        <div class="row w-100 mb-5">
+        <div class="row mb-5">
             <div class="col-4 text-center bonus-pic py-2">
                 <button type="button" class="btn btn-outline-dark mt-2" id="rule1">Rule 1</button>
             </div>
@@ -131,7 +131,7 @@
         });
 
         //TODO: Create a button that, when clicked, makes the last li in each ul have a yellow background.
-        $(".btn").click(function() {
+        $("#highlight-btn").click(function() {
             $("ul > li:nth-child(4)").css("background", "#FF0");
         });
 
