@@ -722,3 +722,28 @@ function toTheNth(a, n) {
 }
 
 toTheNth(testArr2, testNum2);
+
+//---------------------------------------------------
+// Write a function that takes a string (a) as argument.
+// Remove the first 3 characters of the string. Return the result.
+// example input:'abcdefg'
+// expected result: 'defg'
+
+
+// Break up string to array and using for loop, remove the first item in the string 3 times
+// return to a string and finish
+function firstThree(a) {
+    var strToArr = a.split('');
+    for (var i = 0; i <= 2; i++) {
+        strToArr.shift(i);
+    }
+    return strToArr.join('');
+}
+
+//use substring method to immediately remove first three characters from string.
+function lessThree(a) {
+    return a.substring(3);
+}
+
+firstThree('abcdefghijk');
+lessThree('abcdefghijk');
