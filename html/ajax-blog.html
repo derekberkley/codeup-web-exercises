@@ -109,7 +109,7 @@
             </div>
             <div class="card">
                 <h3>Follow Me</h3>
-                <p>Some text..</p>
+                <p>If you dare..</p>
             </div>
         </div>
     </div>
@@ -146,12 +146,16 @@
                 var newPost;
                 response.forEach(function(entry) {
                     newPost = "<h2>" + entry.title + "</h2>" +
-                        "<h5>Title description, Dec 7, 2017</h5>" +
+                        "<h5>Title description, Date</h5>" +
                         "<div class=\"fakeimg\" style=\"height:200px;\">Image</div>" +
                         "<p>" + entry.content + "</p>" +
-                        "<p>" + entry.categories.join(', ') + "</p>";
+                        "<p>" + "tags: " + entry.categories.join(', ') + "</p>";
 
-                    $(".post").html(newPost);
+                    if (response.indexOf(entry) === 0) {
+                        $(".post").first().html(newPost);
+                    } else {
+                        $(".post").last().html(newPost);
+                    }
                 });
             })
 
