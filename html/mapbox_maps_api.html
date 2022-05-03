@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+
+    <div id='map' style='width: 400px; height: 300px;'></div>
+    <!-- <button id="dark">dark-mode</button> -->
+    <!-- <button>satellite</button> -->
+
+    <!-- add jQuery library for use below-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoibGF1cmEtY29kZXVwIiwiYSI6ImNrcHJjczFyYTBtMHIyb2xlNDBsanlva2EifQ.rXUs9LI80u-fy9wz-bG0Qw';
+        // my personal created token below
+        // mapboxgl.accessToken = 'pk.eyJ1IjoiZGVyZWtiZXJrbGV5IiwiYSI6ImNsMnFteTlidjAxNmYzYnVocHRycHlqM24ifQ.Z28GcH4GAsjBOS4jyREK1Q';
+        const map = new mapboxgl.Map({
+            container: 'map', // container ID
+            style: 'mapbox://styles/mapbox/streets-v11', // style URL
+            center: [-74.5, 40], // starting position [lng, lat]
+            zoom: 9 // starting zoom
+        });
+
+        // $(#dark).html()
+    </script>
+
+<script src="../js/mapbox-api.js"></script>
+
+</body>
+</html>
