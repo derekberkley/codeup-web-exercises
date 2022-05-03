@@ -747,3 +747,14 @@ function lessThree(a) {
 
 firstThree('abcdefghijk');
 lessThree('abcdefghijk');
+
+//--------------------------------
+//TODO: Write a function that takes an object (a) as argument. Return an array with all object keys.
+// example input: {a:1,b:2,c:3}
+// expected output: ['a','b','c']
+
+function onlyKeys(a) {
+    return Object.keys(a);
+}
+
+onlyKeys({a:1, b:2, c:3, d:4, e:5});
