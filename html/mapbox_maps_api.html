@@ -10,6 +10,7 @@
     <style>
         body {
             background-color: lightgray;
+            /*background-image: url("../html/images/topo.jpeg");*/
         }
         #map {
             border: 2px solid black;
@@ -20,6 +21,9 @@
         .btn {
             border: 1px solid darkblue;
         }
+        /*h1 {*/
+        /*    background-color: white;*/
+        /*}*/
     </style>
 
 
@@ -46,7 +50,7 @@
     <script>
         mapboxgl.accessToken = 'pk.eyJ1IjoibGF1cmEtY29kZXVwIiwiYSI6ImNrcHJjczFyYTBtMHIyb2xlNDBsanlva2EifQ.rXUs9LI80u-fy9wz-bG0Qw';
         // my personal created token below
-        // mapboxgl.accessToken = 'pk.eyJ1IjoiZGVyZWtiZXJrbGV5IiwiYSI6ImNsMnFteTlidjAxNmYzYnVocHRycHlqM24ifQ.Z28GcH4GAsjBOS4jyREK1Q';
+        var accessToken = 'pk.eyJ1IjoiZGVyZWtiZXJrbGV5IiwiYSI6ImNsMnFteTlidjAxNmYzYnVocHRycHlqM24ifQ.Z28GcH4GAsjBOS4jyREK1Q';
         let map = new mapboxgl.Map({
             container: 'map', // container ID
             style: 'mapbox://styles/mapbox/streets-v11', // style URL
@@ -68,7 +72,7 @@
 
         //TODO: Create a marker on your map of the exact location of your favorite restaurant
         //TODO: set the zoom to allow for best viewing distance.
-        var saltlick = new mapboxgl.Marker()
+        var marker = new mapboxgl.Marker()
             .setLngLat([-98, 30])
             .addTo(map);
 
@@ -77,20 +81,26 @@
         var saltlickPopup = new mapboxgl.Popup()
             .setHTML("<p>Salt Lick BBQ</p>")
 
-        saltlick.setPopup(saltlickPopup);
+        marker.setPopup(saltlickPopup);
 
         //TODO: Refactor your code to display at least three of your favorite restaurants with
-        //TODO: information about each. Create an array of objects with information about each restaurant
-        //TODO: to accomplish this. Use a .forEach() loop rather than a for loop.
+        //TODO: information about each. Create an array of objects with information about each restaurant.
+
 
         var favPlaces = [
-            {name:gristmill, lat:29.74, long:-98.11},
-            {name:blacksBBQ, lat:29.74, long:-98.10},
-            {name:riverHouse, lat:29.74, long:-98.11}
-        ]
+            {name: 'gristmill', lat: 29.74, long: -98.16, html: "<p>Gristmill</p>"},
+            {name: 'blacksBBQ', lat: 29.74, long: -98.10, html: "<p>Black's-BBQ</p>"},
+            {name: 'riverHouse', lat: 29.74, long: -98.11, html: '<p>The River House</p>'}
+        ];
 
-        favPlaces.forEach(function(location) {
-
+        //TODO: To accomplish this use a .forEach() loop rather than a for loop.
+        favPlaces.forEach(function(obj) {
+            var marker2 = new mapboxgl.Marker()
+                .setLngLat([obj.long, obj.lat])
+                .addTo(map);
+            var marker2Popup = new mapboxgl.Popup()
+                .setHTML(obj.html);
+            marker2.setPopup(marker2Popup);
         })
 
     </script>
