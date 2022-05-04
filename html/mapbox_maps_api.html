@@ -68,7 +68,7 @@
 
         //TODO: Create a marker on your map of the exact location of your favorite restaurant
         //TODO: set the zoom to allow for best viewing distance.
-        var marker = new mapboxgl.Marker()
+        var saltlick = new mapboxgl.Marker()
             .setLngLat([-98, 30])
             .addTo(map);
 
@@ -77,7 +77,21 @@
         var saltlickPopup = new mapboxgl.Popup()
             .setHTML("<p>Salt Lick BBQ</p>")
 
-        marker.setPopup(saltlickPopup);
+        saltlick.setPopup(saltlickPopup);
+
+        //TODO: Refactor your code to display at least three of your favorite restaurants with
+        //TODO: information about each. Create an array of objects with information about each restaurant
+        //TODO: to accomplish this. Use a .forEach() loop rather than a for loop.
+
+        var favPlaces = [
+            {name:gristmill, lat:29.74, long:-98.11},
+            {name:blacksBBQ, lat:29.74, long:-98.10},
+            {name:riverHouse, lat:29.74, long:-98.11}
+        ]
+
+        favPlaces.forEach(function(location) {
+
+        })
 
     </script>
 
