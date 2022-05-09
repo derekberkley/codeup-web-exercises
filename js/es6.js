@@ -92,7 +92,7 @@ users.forEach(function( {name, email, languages}) {
 console.log('developers: ', developers); //testing results
 
 // TODO: Use `let` for the following variable
-let list = '<ul>';
+let list = `<ul>`;
 
 // TODO: rewrite the following loop to use a for..of loop
 // developers.forEach(function (developer) {
