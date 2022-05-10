@@ -75,3 +75,12 @@ const nameStr = users.reduce((a, b) => {
 }, "");
 console.log(nameStr);
 
+//TODO: Use .reduce to get the unique list of languages from the list of users.
+const allLangs = users.reduce((a, b) => {
+    for (let eachLang of b.languages) {
+        a.push(eachLang);
+    }
+        return a.filter((each, index) => (a.indexOf(each) === index));
+}, []);
+
+console.log(allLangs);
