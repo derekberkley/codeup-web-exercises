@@ -452,11 +452,11 @@ var tryMe = [{a:1,b:2},{a:5,b:4}]
 // )};
 //     sortThisThing(tryMe);
 
-    array.sort(x, y) {
-    if(x.b < y.b) {
-        return -1;
-    }
-    }
+    // array.sort(x, y) {
+    // if(x.b < y.b) {
+    //     return -1;
+    // }
+    // }
 
 // 1. Rewrite the following using a for loop:
 // var i = 20;
@@ -758,3 +758,22 @@ function onlyKeys(a) {
 }
 
 onlyKeys({a:1, b:2, c:3, d:4, e:5});
+
+function doMath(a, b, c) {
+    let result;
+    if (b === "*") {
+        result = a * c;
+    } else if (b === "/") {
+        result = a / c;
+    } else if (b === "+") {
+        result = a + c;
+    } else if (b === "-") {
+        result = a - c;
+    } else {
+        console.log("i do not recognize that math operator.")
+    }
+    console.log(a + " " + b + " " + c + " = " + result);
+    return result;
+}
+
+doMath(5, "+", 8);
