@@ -320,7 +320,6 @@ var exampleArray = [9, 5, 3, -6, 0, -23, .5, -2.5];
 function sortArr(input) {
     input.forEach(function(element) {
         if (input.indexOf(element) !== input.lastIndexOf(element)) {
-
         }
     })
     var final = input.sort((a, b) => a - b);
@@ -777,3 +776,4 @@ function doMath(a, b, c) {
 }
 
 doMath(5, "+", 8);
+
